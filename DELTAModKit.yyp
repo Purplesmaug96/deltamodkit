@@ -556,6 +556,8 @@
     {"id":{"name":"snd_impact","path":"sounds/snd_impact/snd_impact.yy",},},
     {"id":{"name":"snd_item","path":"sounds/snd_item/snd_item.yy",},},
     {"id":{"name":"snd_knight_boxbreak","path":"sounds/snd_knight_boxbreak/snd_knight_boxbreak.yy",},},
+    {"id":{"name":"snd_knight_cut","path":"sounds/snd_knight_cut/snd_knight_cut.yy",},},
+    {"id":{"name":"snd_knight_cut2","path":"sounds/snd_knight_cut2/snd_knight_cut2.yy",},},
     {"id":{"name":"snd_knight_drawpower","path":"sounds/snd_knight_drawpower/snd_knight_drawpower.yy",},},
     {"id":{"name":"snd_knight_hurtb","path":"sounds/snd_knight_hurtb/snd_knight_hurtb.yy",},},
     {"id":{"name":"snd_knight_jump_quick","path":"sounds/snd_knight_jump_quick/snd_knight_jump_quick.yy",},},
