@@ -11,8 +11,8 @@
   "name":"obj_knight_pointing_cone",
   "overriddenProperties":[],
   "parent":{
-    "name":"Battles",
-    "path":"folders/Custom/Scripts/Configs/Battles.yy",
+    "name":"Objects",
+    "path":"folders/Custom/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_bulletparent",
