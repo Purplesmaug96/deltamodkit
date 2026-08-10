@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_attack_override",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_attack_override",
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Custom/Objects.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,11 +1,13 @@
 enum DREncounter {
 	TestEnemies = 101,	
+	RoaringKnight = 102
 }
 
 enum DREnemy {
 	None = 0,
 	
 	TestEnemy = 101,	
+	RoaringKnight = 102
 }
 
 enum DREncounterPhase {
@@ -41,18 +43,30 @@ function scr_encounter_get(encId) {
 			global.battlemsg[0] = "* Modular test enemies showed up.";
 			break;	
 		}
+		case DREncounter.RoaringKnight: {
+			enemytemp[0].instance = obj_knight_enemy;
+			enemytemp[0].entry = DREnemy.RoaringKnight;
+			enemytemp[0].xx = xx + 425;
+			enemytemp[0].yy = yy + 78;
+			
+			global.battlemsg[0] = "* The Roaring Papyrus appeared.";
+		}
 	}
 }
 
 function scr_enemy_set_sprites(enemyId) {
 	switch (enemyId) {
 		default:
-		case DREnemy.TestEnemy: {
+		case DREnemy.TestEnemy:
 			idlesprite = spr_diamond_overworld;
 			hurtsprite = spr_diamond_knight_overworld;
 			sparedsprite = spr_diamond_overworld;
-			break;	
-		}
+			break;
+		case DREnemy.RoaringKnight:
+			idlesprite = spr_roaringknight_idle;
+			hurtsprite = spr_roaringknight_hurt;
+			sparedsprite = spr_roaringknight_idle;
+			break;
 	}
 }
 
@@ -100,6 +114,28 @@ function scr_monstersetup()
             global.actname[DRCharacter.Ralsei][myself][1] = "SimuDance";
             global.actsimul[DRCharacter.Ralsei][myself][1] = 1;
             break;
+	case DREnemy.RoaringKnight:
+        global.monstername[myself] = stringsetloc("", "scr_monstersetup_slash_scr_monstersetup_gml_2165_0");
+        global.monstermaxhp[myself] = 7300;
+        global.monsterhp[myself] = 7300;
+        global.monsterat[myself] = 40;
+        global.monsterdf[myself] = 0;
+        global.monsterexp[myself] = 0;
+        global.monstergold[myself] = 0;
+        global.sparepoint[myself] = 0;
+        global.mercymod[myself] = 0;
+        global.mercymax[myself] = 100;
+        global.canact[myself][0] = 1;
+        global.actname[myself][0] = stringsetloc("Check", "scr_monstersetup_slash_scr_monstersetup_gml_2177_0");
+        global.actdesc[myself][0] = stringsetloc("Useless#analysis", "scr_monstersetup_slash_scr_monstersetup_gml_1877_0");
+        global.canact[myself][1] = 1;
+        global.actname[myself][1] = stringsetloc("HoldBreath", "scr_monstersetup_slash_scr_monstersetup_gml_2180_0");
+        global.canactsus[myself][0] = 1;
+        global.actnamesus[myself][0] = stringsetloc("S-Action", "scr_monstersetup_slash_scr_monstersetup_gml_2183_0");
+        global.actsimulsus[myself][0] = 0;
+        global.canactral[myself][0] = 1;
+        global.actnameral[myself][0] = stringsetloc("R-Action", "scr_monstersetup_slash_scr_monstersetup_gml_2187_0");
+        global.actsimulral[myself][0] = 0;
     }
 	
 	for (i = 0; i < DRCharacter.__MAX__; i++) {
