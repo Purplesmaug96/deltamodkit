@@ -308,6 +308,8 @@
     {"id":{"name":"obj_jump_to_point","path":"objects/obj_jump_to_point/obj_jump_to_point.yy",},},
     {"id":{"name":"obj_knight_enemy","path":"objects/obj_knight_enemy/obj_knight_enemy.yy",},},
     {"id":{"name":"obj_knight_pointing_cone","path":"objects/obj_knight_pointing_cone/obj_knight_pointing_cone.yy",},},
+    {"id":{"name":"obj_knight_pointing_star","path":"objects/obj_knight_pointing_star/obj_knight_pointing_star.yy",},},
+    {"id":{"name":"obj_knight_pointing_starchild","path":"objects/obj_knight_pointing_starchild/obj_knight_pointing_starchild.yy",},},
     {"id":{"name":"obj_knight_roaring2","path":"objects/obj_knight_roaring2/obj_knight_roaring2.yy",},},
     {"id":{"name":"obj_knight_swordtunnelanim","path":"objects/obj_knight_swordtunnelanim/obj_knight_swordtunnelanim.yy",},},
     {"id":{"name":"obj_legend","path":"objects/obj_legend/obj_legend.yy",},},
