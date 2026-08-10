@@ -828,11 +828,11 @@ if (global.myfight == 3)
         sactcount = 1;
         actcon = 1;
         actconsus = 0;
-        global.canactsus[myself][0] = 0;
-        global.actnamesus[myself][0] = "";
-        global.actsimulsus[myself][0] = 0;
-        global.actactorsus[myself][0] = 0;
-        global.actcostsus[myself][0] = 0;
+        global.canact[DRCharacter.Susie][myself][0] = 0;
+        global.actname[DRCharacter.Susie][myself][0] = "";
+        global.actsimul[DRCharacter.Susie][myself][0] = 0;
+        global.actactor[DRCharacter.Susie][myself][0] = 0;
+        global.actcost[DRCharacter.Susie][myself][0] = 0;
         global.battlespell[1][0] = 0;
         global.battlespell[1][0] = -1;
         global.battleactcount[1] = 0;

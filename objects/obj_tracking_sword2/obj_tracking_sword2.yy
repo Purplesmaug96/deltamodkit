@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_roaringknight_sword_ol",
-    "path":"sprites/spr_roaringknight_sword_ol/spr_roaringknight_sword_ol.yy",
+    "name":"spr_knight_triangle_bullet",
+    "path":"sprites/spr_knight_triangle_bullet/spr_knight_triangle_bullet.yy",
   },
   "spriteMaskId":null,
   "visible":true,
