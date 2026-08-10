@@ -92,9 +92,9 @@ with (obj_herosusie)
     spellsprite = spr_susieb_spell_unhappy;
     defeatsprite = spr_susie_dw_fell;
 }
-with (obj_battleback)
-{
-    instance_destroy();
-}
+// with (obj_battleback)
+// {
+//     instance_destroy();
+// }
 // instance_create(x, y, obj_bgfountaintest);
 global.tempflag[96] = 0;
