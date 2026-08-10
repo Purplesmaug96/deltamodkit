@@ -1,7 +1,7 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_knight_bullet_star_mask",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":50,
   "bbox_left":12,
   "bbox_right":50,
