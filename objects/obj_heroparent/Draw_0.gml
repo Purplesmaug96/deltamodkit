@@ -25,9 +25,9 @@ if (specdraw == 0 && state != 8)
     if (flash == 1)
     {
         fsiner += 1;
-        gpu_set_fog(true, c_white, 0, 1);
+        draw_set_fog(true, c_white, 0, 1);
         draw_sprite_ext(thissprite, index, x, y, scale, scale, 0, image_blend, (-cos(fsiner / 5) * 0.4) + 0.6);
-        gpu_set_fog(false, c_black, 0, 0);
+        draw_set_fog(false, c_black, 0, 0);
     }
 }
 

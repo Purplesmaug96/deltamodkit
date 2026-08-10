@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_knight_jump_quick",
   "parent":{
-    "name":"Objects",
-    "path":"folders/Custom/Objects.yy",
+    "name":"Sounds",
+    "path":"folders/Custom/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

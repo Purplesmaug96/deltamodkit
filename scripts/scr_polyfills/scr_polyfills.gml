@@ -131,7 +131,7 @@ function scr_custom_afterimage(arg0)
 
 function scr_draw_outline(arg0, arg1, arg2)
 {
-	gpu_set_fog(true, arg1, 0, 0);
+	draw_set_fog(true, arg1, 0, 0);
 	var __xdirA = arg0;
 	var __xdirB = 0;
 	var __ydirA = 0;
@@ -147,7 +147,7 @@ function scr_draw_outline(arg0, arg1, arg2)
 	draw_sprite_ext(sprite_index, image_index, x - __xdirA, y - __ydirA, image_xscale, image_yscale, image_angle, c_white, image_alpha * arg2);
 	draw_sprite_ext(sprite_index, image_index, x + __xdirB, y + __ydirB, image_xscale, image_yscale, image_angle, c_white, image_alpha * arg2);
 	draw_sprite_ext(sprite_index, image_index, x - __xdirB, y - __ydirB, image_xscale, image_yscale, image_angle, c_white, image_alpha * arg2);
-	gpu_set_fog(false, c_white, 0, 0);
+	draw_set_fog(false, c_white, 0, 0);
 }
 
 function scr_pingpong(arg0, arg1)

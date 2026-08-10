@@ -3,9 +3,9 @@ if (afterimagecon == 0)
     draw_self();
     if (con == 2)
     {
-        d3d_set_fog(true, c_white, 0, 0);
+        draw_set_fog(true, c_white, 0, 0);
         draw_self();
-        d3d_set_fog(false, c_white, 0, 0);
+        draw_set_fog(false, c_white, 0, 0);
     }
 }
 if (afterimagecon == 1)

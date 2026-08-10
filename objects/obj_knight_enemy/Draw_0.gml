@@ -9,9 +9,9 @@ if (i_ex(obj_knight_swordtunnelanim))
 if (chargeupcon == 2)
 {
     chargeuptimer++;
-    gpu_set_fog(true, c_white, 0, 1);
+    draw_set_fog(true, c_white, 0, 1);
     draw_sprite_ext(idlesprite, siner, x, y, image_xscale, image_yscale, image_angle, image_blend, (10 - chargeuptimer) / 10);
-    gpu_set_fog(false, c_black, 0, 0);
+    draw_set_fog(false, c_black, 0, 0);
     if (chargeuptimer == 10)
     {
         chargeupcon = 3;
@@ -128,7 +128,7 @@ scr_enemy_drawidle_generic(0.16666666666666666);
 if (whiteflash > 0)
 {
     whiteflash--;
-    gpu_set_fog(true, c_white, 0, 1);
+    draw_set_fog(true, c_white, 0, 1);
     if (state == 3 && hurttimer >= 0)
     {
         draw_sprite_ext(hurtsprite, 0, x + shakex + hurtspriteoffx, y + hurtspriteoffy, 2, 2, 0, image_blend, 0.62);
@@ -137,13 +137,13 @@ if (whiteflash > 0)
     {
         draw_sprite_ext(idlesprite, siner, x, y, image_xscale, image_yscale, image_angle, image_blend, 0.62);
     }
-    gpu_set_fog(false, c_black, 0, 0);
+    draw_set_fog(false, c_black, 0, 0);
 }
 if (chargeupcon == 1)
 {
-    gpu_set_fog(true, c_white, 0, 1);
+    draw_set_fog(true, c_white, 0, 1);
     draw_sprite_ext(idlesprite, siner, x, y, image_xscale, image_yscale, image_angle, image_blend, chargeuptimer / 10);
-    gpu_set_fog(false, c_black, 0, 0);
+    draw_set_fog(false, c_black, 0, 0);
 }
 if (becomeflash == 0)
 {

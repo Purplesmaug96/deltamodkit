@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_attack_override",
   "parent":{
-    "name":"Objects",
-    "path":"folders/Custom/Objects.yy",
+    "name":"Scripts",
+    "path":"folders/Custom/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

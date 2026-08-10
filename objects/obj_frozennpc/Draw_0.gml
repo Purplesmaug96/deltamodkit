@@ -69,14 +69,14 @@ if (timer < 1)
     timer += 0.05;
 
 var t = (sprite_height / 2) - (timer * (sprite_height / 2));
-gpu_set_fog(true, specialcolor, 0, 0);
+draw_set_fog(true, specialcolor, 0, 0);
 yoffset = -(sprite_get_yoffset(sprite_index) * image_yscale);
 xoffset = -(sprite_get_xoffset(sprite_index) * image_xscale);
 draw_sprite_part_ext(sprite_index, image_index, 0, t, sprite_width, sprite_height - t, (x - 2) + xoffset, (y - 2) + (t * 2) + yoffset, image_xscale, image_yscale, c_blue, image_alpha * 0.8);
 draw_sprite_part_ext(sprite_index, image_index, 0, t, sprite_width, sprite_height - t, x + 2 + xoffset, (y - 2) + (t * 2) + yoffset, image_xscale, image_yscale, c_blue, image_alpha * 0.4);
 draw_sprite_part_ext(sprite_index, image_index, 0, t, sprite_width, sprite_height - t, (x - 2) + xoffset, y + 2 + (t * 2) + yoffset, image_xscale, image_yscale, c_blue, image_alpha * 0.4);
 draw_sprite_part_ext(sprite_index, image_index, 0, t, sprite_width, sprite_height - t, x + 2 + xoffset, y + 2 + (t * 2) + yoffset, image_xscale, image_yscale, c_blue, image_alpha * 0.8);
-gpu_set_fog(false, c_white, 0, 0);
+draw_set_fog(false, c_white, 0, 0);
 gpu_set_blendmode(bm_add);
 draw_sprite_part_ext(sprite_index, image_index, 0, t, sprite_width, sprite_height - t, x + xoffset, y + (t * 2) + yoffset, image_xscale, image_yscale, specialcolor, image_alpha * 0.4);
 gpu_set_blendmode(bm_normal);

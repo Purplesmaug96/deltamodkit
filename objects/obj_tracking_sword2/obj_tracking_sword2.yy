@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"Object204",
+  "%Name":"obj_tracking_sword2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"Object204",
+  "name":"obj_tracking_sword2",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
