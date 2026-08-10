@@ -289,6 +289,7 @@
     {"id":{"name":"obj_growtangle","path":"objects/obj_growtangle/obj_growtangle.yy",},},
     {"id":{"name":"obj_healanim","path":"objects/obj_healanim/obj_healanim.yy",},},
     {"id":{"name":"obj_healwriter","path":"objects/obj_healwriter/obj_healwriter.yy",},},
+    {"id":{"name":"obj_heart_follower","path":"objects/obj_heart_follower/obj_heart_follower.yy",},},
     {"id":{"name":"obj_heart","path":"objects/obj_heart/obj_heart.yy",},},
     {"id":{"name":"obj_heartburst","path":"objects/obj_heartburst/obj_heartburst.yy",},},
     {"id":{"name":"obj_heartmarker","path":"objects/obj_heartmarker/obj_heartmarker.yy",},},
