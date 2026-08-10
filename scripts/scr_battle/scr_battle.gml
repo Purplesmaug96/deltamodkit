@@ -7,6 +7,10 @@ function scr_battle(encounterno, specialbattle, enemy0, enemy1, enemy2)
     {
         global.flag[9] = 1;
         var batmusic = "rudebuster_boss.ogg";//"battle.ogg";
+		
+		if (global.encounterno == DREncounter.RoaringKnight) {
+			batmusic = "knight.ogg";
+		}
         
         /*if (global.chapter == 3)
         {

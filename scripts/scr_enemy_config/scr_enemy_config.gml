@@ -115,7 +115,7 @@ function scr_monstersetup()
             global.actsimul[DRCharacter.Ralsei][myself][1] = 1;
             break;
 	case DREnemy.RoaringKnight:
-        global.monstername[myself] = "The Roaring Knight";
+        global.monstername[myself] = "Knight";
         global.monstermaxhp[myself] = 7300;
         global.monsterhp[myself] = 7300;
         global.monsterat[myself] = 40;
