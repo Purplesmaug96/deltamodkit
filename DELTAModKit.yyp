@@ -372,6 +372,7 @@
     {"id":{"name":"obj_sur_dark","path":"objects/obj_sur_dark/obj_sur_dark.yy",},},
     {"id":{"name":"obj_tensionbar","path":"objects/obj_tensionbar/obj_tensionbar.yy",},},
     {"id":{"name":"obj_time","path":"objects/obj_time/obj_time.yy",},},
+    {"id":{"name":"obj_tracking_swords_manager","path":"objects/obj_tracking_swords_manager/obj_tracking_swords_manager.yy",},},
     {"id":{"name":"obj_whiteedge","path":"objects/obj_whiteedge/obj_whiteedge.yy",},},
     {"id":{"name":"obj_writer_stay","path":"objects/obj_writer_stay/obj_writer_stay.yy",},},
     {"id":{"name":"obj_writer","path":"objects/obj_writer/obj_writer.yy",},},
