@@ -115,7 +115,7 @@ function scr_monstersetup()
             global.actsimul[DRCharacter.Ralsei][myself][1] = 1;
             break;
 	case DREnemy.RoaringKnight:
-        global.monstername[myself] = stringsetloc("", "scr_monstersetup_slash_scr_monstersetup_gml_2165_0");
+        global.monstername[myself] = "The Roaring Knight";
         global.monstermaxhp[myself] = 7300;
         global.monsterhp[myself] = 7300;
         global.monsterat[myself] = 40;
@@ -125,17 +125,17 @@ function scr_monstersetup()
         global.sparepoint[myself] = 0;
         global.mercymod[myself] = 0;
         global.mercymax[myself] = 100;
-        global.canact[myself][0] = 1;
-        global.actname[myself][0] = stringsetloc("Check", "scr_monstersetup_slash_scr_monstersetup_gml_2177_0");
-        global.actdesc[myself][0] = stringsetloc("Useless#analysis", "scr_monstersetup_slash_scr_monstersetup_gml_1877_0");
-        global.canact[myself][1] = 1;
-        global.actname[myself][1] = stringsetloc("HoldBreath", "scr_monstersetup_slash_scr_monstersetup_gml_2180_0");
-        global.canactsus[myself][0] = 1;
-        global.actnamesus[myself][0] = stringsetloc("S-Action", "scr_monstersetup_slash_scr_monstersetup_gml_2183_0");
-        global.actsimulsus[myself][0] = 0;
-        global.canactral[myself][0] = 1;
-        global.actnameral[myself][0] = stringsetloc("R-Action", "scr_monstersetup_slash_scr_monstersetup_gml_2187_0");
-        global.actsimulral[myself][0] = 0;
+        global.canact[DRCharacter.Kris][myself][0] = 1;
+        global.actname[DRCharacter.Kris][myself][0] = stringsetloc("Check", "scr_monstersetup_slash_scr_monstersetup_gml_2177_0");
+        global.actdesc[DRCharacter.Kris][myself][0] = stringsetloc("Useless#analysis", "scr_monstersetup_slash_scr_monstersetup_gml_1877_0");
+        global.canact[DRCharacter.Kris][myself][1] = 1;
+        global.actname[DRCharacter.Kris][myself][1] = stringsetloc("HoldBreath", "scr_monstersetup_slash_scr_monstersetup_gml_2180_0");
+        global.canact[DRCharacter.Susie][myself][0] = 1;
+        global.actname[DRCharacter.Susie][myself][0] = stringsetloc("S-Action", "scr_monstersetup_slash_scr_monstersetup_gml_2183_0");
+        global.actsimul[DRCharacter.Susie][myself][0] = 0;
+        global.canact[DRCharacter.Ralsei][myself][0] = 1;
+        global.actname[DRCharacter.Ralsei][myself][0] = stringsetloc("R-Action", "scr_monstersetup_slash_scr_monstersetup_gml_2187_0");
+        global.actsimul[DRCharacter.Ralsei][myself][0] = 0;
     }
 	
 	for (i = 0; i < DRCharacter.__MAX__; i++) {
