@@ -1023,6 +1023,7 @@
     {"id":{"name":"spr_roaringknight_hurt","path":"sprites/spr_roaringknight_hurt/spr_roaringknight_hurt.yy",},},
     {"id":{"name":"spr_roaringknight_idle","path":"sprites/spr_roaringknight_idle/spr_roaringknight_idle.yy",},},
     {"id":{"name":"spr_roaringknight_point_ol","path":"sprites/spr_roaringknight_point_ol/spr_roaringknight_point_ol.yy",},},
+    {"id":{"name":"spr_roaringknight_sword_ol","path":"sprites/spr_roaringknight_sword_ol/spr_roaringknight_sword_ol.yy",},},
     {"id":{"name":"spr_roaringknight_tooth","path":"sprites/spr_roaringknight_tooth/spr_roaringknight_tooth.yy",},},
     {"id":{"name":"spr_rudebuster_beam_red","path":"sprites/spr_rudebuster_beam_red/spr_rudebuster_beam_red.yy",},},
     {"id":{"name":"spr_rudebuster_beam","path":"sprites/spr_rudebuster_beam/spr_rudebuster_beam.yy",},},
