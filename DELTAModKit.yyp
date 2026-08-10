@@ -430,6 +430,7 @@
     {"id":{"name":"scr_dmenu","path":"scripts/scr_dmenu/scr_dmenu.yy",},},
     {"id":{"name":"scr_dmgwriter","path":"scripts/scr_dmgwriter/scr_dmgwriter.yy",},},
     {"id":{"name":"scr_doom","path":"scripts/scr_doom/scr_doom.yy",},},
+    {"id":{"name":"scr_draw_self_offset","path":"scripts/scr_draw_self_offset/scr_draw_self_offset.yy",},},
     {"id":{"name":"scr_draw_set_blend_mode","path":"scripts/scr_draw_set_blend_mode/scr_draw_set_blend_mode.yy",},},
     {"id":{"name":"scr_ease","path":"scripts/scr_ease/scr_ease.yy",},},
     {"id":{"name":"scr_emote","path":"scripts/scr_emote/scr_emote.yy",},},
