@@ -9,8 +9,8 @@
   "name":"obj_heart_follower",
   "overriddenProperties":[],
   "parent":{
-    "name":"Battles",
-    "path":"folders/Custom/Scripts/Configs/Battles.yy",
+    "name":"Objects",
+    "path":"folders/Custom/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_bulletparent",

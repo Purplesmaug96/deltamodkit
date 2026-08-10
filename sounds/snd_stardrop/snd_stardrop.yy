@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_stardrop",
   "parent":{
-    "name":"DELTAModKit",
-    "path":"DELTAModKit.yyp",
+    "name":"Sounds",
+    "path":"folders/Custom/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

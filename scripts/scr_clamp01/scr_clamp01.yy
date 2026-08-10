@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_clamp01",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_clamp01",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Custom/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
