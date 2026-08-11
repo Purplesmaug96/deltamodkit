@@ -22,6 +22,16 @@ function msgsetsub()
     msgset(argument[0], str);
 }
 
+function msgsetloc(arg0, arg1, arg2)
+{
+    msgset(arg0, arg1);
+}
+
+function msgnextloc(arg0, arg1)
+{
+    msgnext(arg0);
+}
+
 function msgnextsub()
 {
     var len = argument_count;
