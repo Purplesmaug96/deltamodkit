@@ -5,7 +5,10 @@
   "managed":true,
   "name":"obj_sword_vortex_manager",
   "overriddenProperties":[],
-  "parent":{"name":"Objects","path":"folders/Custom/Objects.yy",},
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Custom/Scripts/Objects.yy",
+  },
   "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,

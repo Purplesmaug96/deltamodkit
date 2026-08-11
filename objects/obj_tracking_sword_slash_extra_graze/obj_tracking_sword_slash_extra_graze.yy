@@ -9,7 +9,10 @@
   "managed":true,
   "name":"obj_tracking_sword_slash_extra_graze",
   "overriddenProperties":[],
-  "parent":{"name":"Objects","path":"folders/Custom/Objects.yy",},
+  "parent":{
+    "name":"Objects",
+    "path":"folders/Custom/Scripts/Objects.yy",
+  },
   "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -28,7 +31,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{"name":"spr_pxwhite2","path":"sprites/spr_pxwhite2/spr_pxwhite2.yy",},
+  "spriteId":{
+    "name":"spr_pxwhite2",
+    "path":"sprites/spr_pxwhite2/spr_pxwhite2.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

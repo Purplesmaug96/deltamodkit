@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Markers",
-    "path":"folders/Custom/Objects/Markers.yy",
+    "path":"folders/Custom/Scripts/Objects/Markers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

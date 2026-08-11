@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/Custom/Objects.yy",
+    "path":"folders/Custom/Scripts/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
