@@ -457,6 +457,7 @@
     {"id":{"name":"scr_draw_self_offset","path":"scripts/scr_draw_self_offset/scr_draw_self_offset.yy",},},
     {"id":{"name":"scr_draw_set_blend_mode","path":"scripts/scr_draw_set_blend_mode/scr_draw_set_blend_mode.yy",},},
     {"id":{"name":"scr_draw_set_fog","path":"scripts/scr_draw_set_fog/scr_draw_set_fog.yy",},},
+    {"id":{"name":"scr_draw_sprite_part_ext_rot","path":"scripts/scr_draw_sprite_part_ext_rot/scr_draw_sprite_part_ext_rot.yy",},},
     {"id":{"name":"scr_ease","path":"scripts/scr_ease/scr_ease.yy",},},
     {"id":{"name":"scr_emote","path":"scripts/scr_emote/scr_emote.yy",},},
     {"id":{"name":"scr_encounter","path":"scripts/scr_encounter/scr_encounter.yy",},},

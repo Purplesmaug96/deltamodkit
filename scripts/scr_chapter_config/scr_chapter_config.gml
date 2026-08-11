@@ -1,5 +1,5 @@
 function scr_chapter_config() {
-	global.chapter = 4;
+	global.chapter = 40;
 	global.versionno = "v0.901-modkit-3";
 	
 	global.newFileStartingRoom = room_lw_test;
