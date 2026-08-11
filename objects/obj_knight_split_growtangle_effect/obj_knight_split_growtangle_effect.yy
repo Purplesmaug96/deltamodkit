@@ -13,10 +13,7 @@
     "name":"Objects",
     "path":"folders/Custom/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_growtangle",
-    "path":"objects/obj_growtangle/obj_growtangle.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
