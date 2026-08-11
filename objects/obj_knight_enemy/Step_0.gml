@@ -781,103 +781,120 @@ if (global.myfight == 3)
 {
     xx = __view_get(e__VW.XView, 0);
     yy = __view_get(e__VW.YView, 0);
-    if (acting == 1 && actcon == 0)
+
+    // Kris's ACTs
+    if (actcon[DRCharacter.Kris] == 1)
     {
-        actcon = 1;
-        checkcount++;
-        if (checkcount == 1)
+        actcon[DRCharacter.Kris] = 0;
+        nextact = 1;
+
+        if (acting[DRCharacter.Kris] == 1)
         {
-            msgsetloc(0, "* Kris analyzed the enemy!/", "obj_knight_enemy_slash_Step_0_gml_393_0");
-            msgnextloc("* But Kris&couldn't learn anything./%", "obj_knight_enemy_slash_Step_0_gml_394_0");
+            checkcount++;
+            if (checkcount == 1)
+            {
+                msgsetloc(0, "* Kris analyzed the enemy!/", "obj_knight_enemy_slash_Step_0_gml_393_0");
+                msgnextloc("* But Kris&couldn't learn anything./%", "obj_knight_enemy_slash_Step_0_gml_394_0");
+            }
+            else
+            {
+                msgsetloc(0, "* Kris points into the distance./", "obj_knight_enemy_slash_Step_0_gml_398_0");
+                msgnextloc("* Nothing happened./%", "obj_knight_enemy_slash_Step_0_gml_399_0");
+            }
+            scr_battletext_default();
         }
-        else
+
+        if (acting[DRCharacter.Kris] == 2)
         {
-            msgsetloc(0, "* Kris points into the distance./", "obj_knight_enemy_slash_Step_0_gml_398_0");
-            msgnextloc("* Nothing happened./%", "obj_knight_enemy_slash_Step_0_gml_399_0");
+            holdbreathcount++;
+            if (holdbreathcount <= 1)
+            {
+                msgsetloc(0, "* Kris held their breath.&* Their heartbeat quickened.&* The SOUL now moves faster./%", "obj_knight_enemy_slash_Step_0_gml_497_0");
+            }
+            if (holdbreathcount > 1)
+            {
+                msgsetloc(0, "* Kris held their breath...&* Kris smiled.&* Nothing happened./%", "obj_knight_enemy_slash_Step_0_gml_415_0");
+            }
+            scr_battletext_default();
+            holdbreathcount = 1;
         }
-        scr_battletext_default();
     }
-    if (acting == 2 && actcon == 0)
+
+    // Susie's ACTs
+    if (actcon[DRCharacter.Susie] == 1)
     {
-        actcon = 1;
-        holdbreathcount++;
-        if (holdbreathcount <= 1)
+        if (acting[DRCharacter.Susie] == 1)
         {
-            msgsetloc(0, "* Kris held their breath.&* Their heartbeat quickened.&* The SOUL now moves faster./%", "obj_knight_enemy_slash_Step_0_gml_497_0");
-        }
-        if (holdbreathcount > 1)
-        {
-            msgsetloc(0, "* Kris held their breath...&* Kris smiled.&* Nothing happened./%", "obj_knight_enemy_slash_Step_0_gml_415_0");
-        }
-        scr_battletext_default();
-        holdbreathcount = 1;
-    }
-    if (actingsus == 1 && actconsus == 1)
-    {
-        scr_speaker("noone");
-        msgsetloc(0, "* Susie talked to the Knight!/", "obj_knight_enemy_slash_Step_0_gml_424_0");
-        scr_anyface_next("susie", "J");
-        msgnextloc("\\EJ* I don't know what the hell you are, but.../", "obj_knight_enemy_slash_Step_0_gml_426_0");
-        msgnextloc("\\EJ* Leave Toriel alone! You hear me!?/", "obj_knight_enemy_slash_Step_0_gml_427_0");
-        msgnextloc("\\EV* .../", "obj_knight_enemy_slash_Step_0_gml_428_0");
-        msgnextloc("\\EW* ... Fine, you don't wanna listen?/", "obj_knight_enemy_slash_Step_0_gml_429_0");
-        msgnextloc("\\EX* Then we'll just. Have to do things the hard way./", "obj_knight_enemy_slash_Step_0_gml_430_0");
-        scr_anyface_next("none", 0);
-        msgnextloc("* (Susie will not ACT any more.)/%", "obj_knight_enemy_slash_Step_0_gml_432_0");
-        scr_battletext_default();
-        sactcount = 1;
-        actcon = 1;
-        actconsus = 0;
-        global.canact[DRCharacter.Susie][myself][0] = 0;
-        global.actname[DRCharacter.Susie][myself][0] = "";
-        global.actsimul[DRCharacter.Susie][myself][0] = 0;
-        global.actactor[DRCharacter.Susie][myself][0] = 0;
-        global.actcost[DRCharacter.Susie][myself][0] = 0;
-        global.battlespell[1][0] = 0;
-        global.battlespell[1][0] = -1;
-        global.battleactcount[1] = 0;
-        global.battlespellname[1][0] = "";
-        global.battlespelldesc[1][0] = "";
-        scr_spellmenu_setup();
-    }
-    if (actingral == 1 && actconral == 1)
-    {
-        ractcount++;
-        if (ractcount == 1)
-        {
+            nextact = 1;
+            actcon[DRCharacter.Susie] = 0;
+
             scr_speaker("noone");
-            msgsetloc(0, "* Ralsei tried talking.../", "obj_knight_enemy_slash_Step_0_gml_461_0");
-            scr_anyface_next("ralsei", "Q");
-            msgnextloc("\\EQ* Please... please, don't do this.../", "obj_knight_enemy_slash_Step_0_gml_463_0");
-            msgnextloc("\\Ee* If the Roaring happens, then... then.../", "obj_knight_enemy_slash_Step_0_gml_464_0");
-            msgnextloc("\\EZ* Please... stop...!/", "obj_knight_enemy_slash_Step_0_gml_465_0");
+            msgsetloc(0, "* Susie talked to the Knight!/", "obj_knight_enemy_slash_Step_0_gml_424_0");
+            scr_anyface_next("susie", "J");
+            msgnextloc("\\EJ* I don't know what the hell you are, but.../", "obj_knight_enemy_slash_Step_0_gml_426_0");
+            msgnextloc("\\EJ* Leave Toriel alone! You hear me!?/", "obj_knight_enemy_slash_Step_0_gml_427_0");
+            msgnextloc("\\EV* .../", "obj_knight_enemy_slash_Step_0_gml_428_0");
+            msgnextloc("\\EW* ... Fine, you don't wanna listen?/", "obj_knight_enemy_slash_Step_0_gml_429_0");
+            msgnextloc("\\EX* Then we'll just. Have to do things the hard way./", "obj_knight_enemy_slash_Step_0_gml_430_0");
             scr_anyface_next("none", 0);
-            msgnextloc("* (... but nothing happened.)/%", "obj_knight_enemy_slash_Step_0_gml_467_0");
-            scr_speaker("noone");
+            msgnextloc("* (Susie will not ACT any more.)/%", "obj_knight_enemy_slash_Step_0_gml_432_0");
+            scr_battletext_default();
+            sactcount = 1;
+            global.canact[DRCharacter.Susie][myself][0] = 0;
+            global.actname[DRCharacter.Susie][myself][0] = "";
+            global.actsimul[DRCharacter.Susie][myself][0] = 0;
+            global.actactor[DRCharacter.Susie][myself][0] = 0;
+            global.actcost[DRCharacter.Susie][myself][0] = 0;
+            global.battlespell[1][0] = 0;
+            global.battlespell[1][0] = -1;
+            global.battleactcount[1] = 0;
+            global.battlespellname[1][0] = "";
+            global.battlespelldesc[1][0] = "";
+            scr_spellmenu_setup();
         }
-        else
-        {
-            scr_speaker("noone");
-            msgsetloc(0, "* Ralsei tried talking.../", "obj_knight_enemy_slash_Step_0_gml_473_0");
-            scr_anyface_next("ralsei", "8");
-            msgnextloc("\\E8* Please, stop.../", "obj_knight_enemy_slash_Step_0_gml_475_0");
-            scr_anyface_next("none", 0);
-            msgnextloc("* (... but nothing happened.)/%", "obj_knight_enemy_slash_Step_0_gml_477_0");
-        }
-        scr_battletext_default();
-        actcon = 1;
-        actconral = 0;
     }
-    if (actcon == 20 || actconsus == 20 || actconral == 20)
+
+    // Ralsei's ACTs
+    if (actcon[DRCharacter.Ralsei] == 1)
     {
-        if (scr_terminate_writer())
+        if (acting[DRCharacter.Ralsei] == 1)
         {
-            actconsus = -1;
-            actconral = -1;
-            actcon = 1;
+            nextact = 1;
+            actcon[DRCharacter.Ralsei] = 0;
+
+            ractcount++;
+            if (ractcount == 1)
+            {
+                scr_speaker("noone");
+                msgsetloc(0, "* Ralsei tried talking.../", "obj_knight_enemy_slash_Step_0_gml_461_0");
+                scr_anyface_next("ralsei", "Q");
+                msgnextloc("\\EQ* Please... please, don't do this.../", "obj_knight_enemy_slash_Step_0_gml_463_0");
+                msgnextloc("\\Ee* If the Roaring happens, then... then.../", "obj_knight_enemy_slash_Step_0_gml_464_0");
+                msgnextloc("\\EZ* Please... stop...!/", "obj_knight_enemy_slash_Step_0_gml_465_0");
+                scr_anyface_next("none", 0);
+                msgnextloc("* (... but nothing happened.)/%", "obj_knight_enemy_slash_Step_0_gml_467_0");
+                scr_speaker("noone");
+            }
+            else
+            {
+                scr_speaker("noone");
+                msgsetloc(0, "* Ralsei tried talking.../", "obj_knight_enemy_slash_Step_0_gml_473_0");
+                scr_anyface_next("ralsei", "8");
+                msgnextloc("\\E8* Please, stop.../", "obj_knight_enemy_slash_Step_0_gml_475_0");
+                scr_anyface_next("none", 0);
+                msgnextloc("* (... but nothing happened.)/%", "obj_knight_enemy_slash_Step_0_gml_477_0");
+            }
+            scr_battletext_default();
         }
     }
-    if (actcon == 1 && !instance_exists(obj_writer))
+
+    // Finish handling
+    if (arr_contains(actcon, 20) && scr_terminate_writer())
+    {
+        for (i = 0; i < DRCharacter.__MAX__; i++) { actcon[i] = -1; nextact = 1; }
+    }
+
+    if (nextact && !instance_exists(obj_writer))
     {
         scr_nextact();
     }
