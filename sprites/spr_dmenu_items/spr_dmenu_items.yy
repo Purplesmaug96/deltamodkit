@@ -159,8 +159,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"dw",
+    "path":"texturegroups/dw",
   },
   "type":0,
   "VTile":false,

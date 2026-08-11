@@ -92,8 +92,8 @@
     "ralsei",
   ],
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"party",
+    "path":"texturegroups/party",
   },
   "type":0,
   "VTile":false,
