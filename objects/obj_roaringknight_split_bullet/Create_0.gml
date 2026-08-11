@@ -11,6 +11,6 @@ turn_timer = 0;
 turn_dir = 0;
 grazed = 1;
 turn_start = false;
-distance = 0;
+gt_dist = 0;
 anim_timer = 0;
 image_speed = 0;

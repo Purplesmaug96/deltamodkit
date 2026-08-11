@@ -1,4 +1,4 @@
-var _dist = round(distance);
+var _dist = round(gt_dist);
 if (con == 0)
 	_dist = 0;
 var _sw = vertical ? _dist : 0;

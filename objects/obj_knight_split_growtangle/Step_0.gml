@@ -8,7 +8,7 @@ if (!init)
 	init = true;
 }
 timer++;
-old_distance = distance;
+old_distance = gt_dist;
 if (con == 1)
 {
 	if (timer <= 1)
@@ -154,19 +154,19 @@ if (con == 2)
 	}
 	if (timer <= (_hold / 2))
 	{
-		distance = scr_ease_out(timer / (split_hold / 2), 3) * max_distance;
+		gt_dist = scr_ease_out(timer / (split_hold / 2), 3) * max_distance;
 		if (diagonal)
 		{
-			obj_heart.x += ((distance - old_distance) * heart_x * 1);
-			obj_heart.y += ((distance - old_distance) * heart_y * 1);
+			obj_heart.x += ((gt_dist - old_distance) * heart_x * 1);
+			obj_heart.y += ((gt_dist - old_distance) * heart_y * 1);
 		}
 		else if (vertical)
 		{
-			obj_heart.x += ((distance - old_distance) * heart_x * 1.25);
+			obj_heart.x += ((gt_dist - old_distance) * heart_x * 1.25);
 		}
 		else
 		{
-			obj_heart.y += ((distance - old_distance) * heart_y * 1.25);
+			obj_heart.y += ((gt_dist - old_distance) * heart_y * 1.25);
 		}
 	}
 	else
@@ -176,7 +176,7 @@ if (con == 2)
 }
 if (con == 3)
 {
-	distance = max_distance - (scr_ease_in(timer / (split_hold / 2), 3) * max_distance);
+	gt_dist = max_distance - (scr_ease_in(timer / (split_hold / 2), 3) * max_distance);
 	if (timer >= (_hold / 2))
 	{
 		if (vertical || diagonal)
@@ -190,8 +190,8 @@ if (con == 3)
 }
 if (con == 4)
 {
-	distance = scr_movetowards(distance, 0, 12);
-	if (distance == 0)
+	gt_dist = scr_movetowards(gt_dist, 0, 12);
+	if (gt_dist == 0)
 	{
 		con = 0;
 		split = false;
@@ -212,7 +212,7 @@ if (con == 4)
 		snd_play(snd_locker);
 	}
 }
-var _dist = round(distance);
+var _dist = round(gt_dist);
 if (vertical)
 {
 	marker[0].image_angle = -90;
@@ -231,7 +231,7 @@ else
 	marker[0].x = x - 1;
 	marker[1].x = x + 3;
 }
-if (distance > 0)
+if (gt_dist > 0)
 	obj_growtangle.x = -9999;
 else
 	obj_growtangle.x = obj_growtangle.xstart;

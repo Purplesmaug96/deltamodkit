@@ -1,16 +1,16 @@
-var _splid = vertical ? round(distance) : 0;
-var _dist = vertical ? 0 : round(distance);
+var _splid = vertical ? round(gt_dist) : 0;
+var _dist = vertical ? 0 : round(gt_dist);
 var _angle = angle + (vertical ? 90 : 0);
 if (diagonal)
 {
-	_splid = sqrt(0.5) * distance;
+	_splid = sqrt(0.5) * gt_dist;
 	_dist = _splid;
 	_angle += 45;
 }
-var _xx = (distance > 0) ? irandom_range(-1, 1) : 0;
-var _yy = (distance > 0) ? irandom_range(-1, 1) : 0;
-var _xx2 = (distance > 0) ? irandom_range(-1, 1) : 0;
-var _yy2 = (distance > 0) ? irandom_range(-1, 1) : 0;
+var _xx = (gt_dist > 0) ? irandom_range(-1, 1) : 0;
+var _yy = (gt_dist > 0) ? irandom_range(-1, 1) : 0;
+var _xx2 = (gt_dist > 0) ? irandom_range(-1, 1) : 0;
+var _yy2 = (gt_dist > 0) ? irandom_range(-1, 1) : 0;
 if (!surface_exists(source_surf))
 {
 	source_surf = surface_create(170, 170);
@@ -22,12 +22,12 @@ if (!surface_exists(source_surf))
 	half_box_a = surface_create(170, 170);
 	half_box_b = surface_create(170, 170);
 }
-if (distance == 0)
+if (gt_dist == 0)
 {
 	draw_surface_ext(source_surf, x - 85, y - 85, 1, 1, 0, image_blend, 1);
 	update_box = true;
 }
-if (distance != 0 && update_box)
+if (gt_dist != 0 && update_box)
 {
 	var _xmul = lengthdir_x(1, _angle);
 	var _ymul = lengthdir_y(1, _angle);
@@ -80,7 +80,7 @@ if (distance != 0 && update_box)
 	surface_reset_target();
 	update_box = false;
 }
-if (distance > 0)
+if (gt_dist > 0)
 {
 	if (diagonal && vertical)
 	{
@@ -96,7 +96,7 @@ if (distance > 0)
 draw_set_color(c_white);
 if (con > 0)
 {
-	if (round(distance) == 0)
+	if (round(gt_dist) == 0)
 	{
 		if (vertical)
 			draw_sprite_ext(spr_whitepixel, 0, x + xoffset, y - 74, _dist * 2, _splid * 2, angle, c_white, 1);

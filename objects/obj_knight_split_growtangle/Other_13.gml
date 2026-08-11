@@ -71,9 +71,9 @@ else if (con == 1)
 	}
 	if (timer <= 30)
 	{
-		var _old_distance = distance;
-		distance = scr_ease_out(timer / 30, 6) * 50;
-		obj_heart.y += ((distance - _old_distance) * heart_y * 1.25);
+		var _old_distance = gt_dist;
+		gt_dist = scr_ease_out(timer / 30, 6) * 50;
+		obj_heart.y += ((gt_dist - _old_distance) * heart_y * 1.25);
 	}
 	else
 	{
@@ -83,12 +83,12 @@ else if (con == 1)
 if (con >= 1)
 {
 	var _quarterbox = 37.5;
-	var _boxy = y + ((distance + _quarterbox) * heart_y);
+	var _boxy = y + ((gt_dist + _quarterbox) * heart_y);
 	if (obj_heart.y < ((_boxy - _quarterbox) + 4))
 		obj_heart.y = (_boxy - _quarterbox) + 4;
 	if (obj_heart.y > ((_boxy + _quarterbox) - 24))
 		obj_heart.y = (_boxy + _quarterbox) - 24;
 }
-var _dist = round(distance);
+var _dist = round(gt_dist);
 marker[0].y = y - _dist - 1;
 marker[1].y = y + _dist + 3;
