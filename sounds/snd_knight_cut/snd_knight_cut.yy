@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_knight_cut",
   "parent":{
-    "name":"Sprites",
-    "path":"folders/Custom/Sprites.yy",
+    "name":"Sounds",
+    "path":"folders/Custom/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
