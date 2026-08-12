@@ -119,8 +119,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"faces",
-    "path":"texturegroups/faces",
+    "name":"texgroup_faces",
+    "path":"texturegroups/texgroup_faces",
   },
   "type":0,
   "VTile":false,

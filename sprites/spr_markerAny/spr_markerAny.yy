@@ -191,8 +191,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"debug",
-    "path":"texturegroups/debug",
+    "name":"texgroup_debug",
+    "path":"texturegroups/texgroup_debug",
   },
   "type":0,
   "VTile":false,

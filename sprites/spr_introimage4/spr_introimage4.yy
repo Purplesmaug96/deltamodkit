@@ -91,8 +91,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"prophecy",
-    "path":"texturegroups/prophecy",
+    "name":"texgroup_prophecy",
+    "path":"texturegroups/texgroup_prophecy",
   },
   "type":0,
   "VTile":false,

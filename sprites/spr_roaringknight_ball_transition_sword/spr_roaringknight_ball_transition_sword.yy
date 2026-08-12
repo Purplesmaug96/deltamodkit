@@ -113,8 +113,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"texgroup_knight",
+    "path":"texturegroups/texgroup_knight",
   },
   "type":0,
   "VTile":false,

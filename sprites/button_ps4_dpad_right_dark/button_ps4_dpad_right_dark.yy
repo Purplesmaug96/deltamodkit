@@ -83,8 +83,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"controller_buttons",
-    "path":"texturegroups/controller_buttons",
+    "name":"texgroup_controller_buttons",
+    "path":"texturegroups/texgroup_controller_buttons",
   },
   "type":0,
   "VTile":false,

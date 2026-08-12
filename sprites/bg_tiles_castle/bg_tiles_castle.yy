@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":2.525,
   "textureGroupId":{
-    "name":"backgrounds",
-    "path":"texturegroups/backgrounds",
+    "name":"texgroup_backgrounds",
+    "path":"texturegroups/texgroup_backgrounds",
   },
   "type":0,
   "VTile":false,

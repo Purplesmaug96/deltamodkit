@@ -99,8 +99,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"dw",
-    "path":"texturegroups/dw",
+    "name":"texgroup_dw",
+    "path":"texturegroups/texgroup_dw",
   },
   "type":0,
   "VTile":false,

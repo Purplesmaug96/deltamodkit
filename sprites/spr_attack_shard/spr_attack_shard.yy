@@ -99,8 +99,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"battle",
-    "path":"texturegroups/battle",
+    "name":"texgroup_battle",
+    "path":"texturegroups/texgroup_battle",
   },
   "type":0,
   "VTile":false,
