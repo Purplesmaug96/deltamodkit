@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_heavy_passing",
   "parent":{
-    "name":"DELTAModKit",
-    "path":"DELTAModKit.yyp",
+    "name":"Sounds",
+    "path":"folders/Custom/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

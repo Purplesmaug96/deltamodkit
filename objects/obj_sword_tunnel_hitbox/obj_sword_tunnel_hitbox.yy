@@ -10,8 +10,8 @@
   "name":"obj_sword_tunnel_hitbox",
   "overriddenProperties":[],
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Custom/Sounds.yy",
+    "name":"Objects",
+    "path":"folders/Custom/Scripts/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_regularbullet",
