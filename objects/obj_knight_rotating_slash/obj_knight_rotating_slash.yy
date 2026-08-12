@@ -15,8 +15,8 @@
   "name":"obj_knight_rotating_slash",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Custom/Scripts.yy",
+    "name":"Objects",
+    "path":"folders/Custom/Scripts/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_bulletparent",

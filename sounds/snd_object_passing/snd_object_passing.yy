@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_object_passing",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Custom/Scripts.yy",
+    "name":"Sounds",
+    "path":"folders/Custom/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
