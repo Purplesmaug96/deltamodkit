@@ -233,7 +233,7 @@ if (state == "aim")
         }
         else
         {
-            scr_var_delayed("sprite_index", 3329, 4);
+            scr_var_delayed("sprite_index", spr_roaringknight_flurry, 4);
             scr_var_delayed("image_speed", 1, 4);
         }
     }

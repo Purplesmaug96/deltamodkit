@@ -34,7 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_lasergun_laser_telegraph_mask",
+    "path":"sprites/spr_lasergun_laser_telegraph_mask/spr_lasergun_laser_telegraph_mask.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

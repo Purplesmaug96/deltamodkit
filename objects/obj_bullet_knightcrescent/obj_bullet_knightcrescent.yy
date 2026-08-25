@@ -39,6 +39,9 @@
     "name":"spr_bullet_knightcrescent",
     "path":"sprites/spr_bullet_knightcrescent/spr_bullet_knightcrescent.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_bullet_knightcrescent_hitbox",
+    "path":"sprites/spr_bullet_knightcrescent_hitbox/spr_bullet_knightcrescent_hitbox.yy",
+  },
   "visible":true,
 }

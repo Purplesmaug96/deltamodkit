@@ -17,7 +17,7 @@ function scr_chapter_get_recruit_color(chapter) {
 	return c_black;
 }
 
-function scr_gamestart_chapter_override(){
+function scr_gamestart_chapter_override() {
     global.plot = 0;
     global.char[0] = DRCharacter.Kris;
     global.char[1] = DRCharacter.Susie;
