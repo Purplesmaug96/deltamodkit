@@ -36,7 +36,7 @@ with (obj_roaringknight_splitslash)
 		var _size = lerp(4, 0, _ease);
 		var _length = clamp01(timer / 30) * 90;
 		draw_sprite_ext(spr_pxwhite10_center, 0, 71 + xoffset, 71 + yoffset, _length, _size, _spin + image_angle + angleoffset, _backing, 1);
-		gpu_set_blendmode_ext(7, bm_dest_alpha);
+		gpu_set_blendmode_ext(bm_dest_alpha, bm_dest_alpha);
 		draw_sprite_tiled_ext(spr_knight_bullet_flow, 2, timer, timer, 0.25, 0.25, image_blend, 1);
 		draw_sprite_tiled_ext(spr_knight_bullet_flow, 2, -timer + 40, -timer + 40, 0.25, 0.25, image_blend, 1);
 		gpu_set_blendmode(bm_normal);

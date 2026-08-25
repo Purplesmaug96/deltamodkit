@@ -91,6 +91,7 @@ function scr_bullet_pattern(bulletPatternId) {
 		    var knight_roarin2 = instance_create(creatorid.x, creatorid.y, obj_knight_roaring2);
 		    knight_roarin2.target = 3;
 		    scr_bullet_inherit(knight_roarin2);
+			break;
 		}
 		case DRBulletPattern.Stars: {
 			if (init == 1)

@@ -928,10 +928,7 @@ if (end_cutscene_version == 1)
         {
             instance_destroy();
         }
-        with (obj_ch3_PTB02)
-        {
-            teamdefeated = false;
-        }
+        // (obj_ch3_PTB02 not present in DMK; teamdefeated only mattered for its overworld cutscene)
         endcon = 2;
         obj_battlecontroller.noreturn = 1;
         obj_battlecontroller.intro = 2;

@@ -213,23 +213,41 @@ if (con == 4)
 	}
 }
 var _dist = round(gt_dist);
-if (vertical)
+if (diagonal)
+{
+	if (vertical)
+	{
+		marker[0].image_angle = -45;
+		marker[1].image_angle = 135;
+	}
+	else
+	{
+		marker[0].image_angle = 225;
+		marker[1].image_angle = 45;
+	}
+	var _sqrt_dist = sqrt(0.5) * _dist;
+	marker[0].x = (x - _sqrt_dist - 1) + xoffset;
+	marker[1].x = x + _sqrt_dist + 3 + xoffset;
+	marker[0].y = (y - _sqrt_dist - 1) + yoffset;
+	marker[1].y = y + _sqrt_dist + 3 + yoffset;
+}
+else if (vertical)
 {
 	marker[0].image_angle = -90;
 	marker[1].image_angle = 90;
-	marker[0].x = x - _dist - 1;
-	marker[1].x = x + _dist + 3;
-	marker[0].y = y - 1;
-	marker[1].y = y + 3;
+	marker[0].x = (x - _dist - 1) + xoffset;
+	marker[1].x = x + _dist + 3 + xoffset;
+	marker[0].y = (y - 1) + yoffset;
+	marker[1].y = y + 3 + yoffset;
 }
 else
 {
 	marker[0].image_angle = 180;
 	marker[1].image_angle = 0;
-	marker[0].y = y - _dist - 1;
-	marker[1].y = y + _dist + 3;
-	marker[0].x = x - 1;
-	marker[1].x = x + 3;
+	marker[0].y = (y - _dist - 1) + yoffset;
+	marker[1].y = y + _dist + 3 + yoffset;
+	marker[0].x = (x - 1) + xoffset;
+	marker[1].x = x + 3 + xoffset;
 }
 if (gt_dist > 0)
 	obj_growtangle.x = -9999;

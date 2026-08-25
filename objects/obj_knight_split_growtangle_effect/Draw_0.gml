@@ -34,7 +34,7 @@ var _sy = screeny();
 if (vertical)
 {
 	draw_surface_part_ext(surf, 0, 0, _sx, 480, camerax(), cameray() - (timer * 8), 1, 1, 16777215, _fade / 2);
-	draw_surface_part_ext(surf, 0, 0, 640 - _sx, 480, x, cameray() + (timer * 8), 1, 1, 16777215, _fade / 2);
+	draw_surface_part_ext(surf, _sx, 0, 640 - _sx, 480, x, cameray() + (timer * 8), 1, 1, 16777215, _fade / 2);
 }
 else
 {

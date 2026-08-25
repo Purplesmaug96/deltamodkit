@@ -74,7 +74,7 @@ if (gt_dist != 0 && update_box)
 	draw_surface(half_box_b, _xmul * _deviation, _ymul * _deviation);
 	draw_set_color(merge_color(c_black, c_white, 0.25));
 	var _abs_deviation = 85 + abs(_deviation);
-	gpu_set_blendmode_ext(7, bm_zero);
+	gpu_set_blendmode_ext(bm_dest_alpha, bm_zero);
 	draw_line((85 + xoffset) - (_xmul * _abs_deviation), (85 + yoffset) - (_ymul * _abs_deviation), 85 + xoffset + (_xmul * _abs_deviation), 85 + yoffset + (_ymul * _abs_deviation));
 	gpu_set_blendmode(bm_normal);
 	surface_reset_target();
