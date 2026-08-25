@@ -228,7 +228,7 @@ if (intensity == 4)
         {
             sprite_index = spr_roaringknight_front_roar;
             image_speed = 0.5;
-            knight_sprite = 219;
+            knight_sprite = spr_roaringknight_front_roar;
             knight_sprite_image = 0;
             knight_sprite_speed = 0.5;
         }
@@ -319,7 +319,7 @@ if (intensity == 4)
     if (roaring_timer == 275)
     {
         sprite_index = spr_roaringknight_front_slash;
-        knight_sprite = 4320;
+        knight_sprite = spr_roaringknight_front_slash;
         scr_lerpvar("knight_sprite_image", 0, 2, 8);
         scr_lerpvar("image_index", 0, 2, 8);
         scr_lerpvar("bobble_amp", 4, 0, 24);
