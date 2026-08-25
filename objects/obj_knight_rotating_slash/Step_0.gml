@@ -458,7 +458,7 @@ if (state == "cooldown")
             if (final_counter == 28)
             {
                 state = "return";
-                scr_var("sprite_index", 2128);
+                scr_var("sprite_index", spr_roaringknight_attack_ol);
                 scr_var("image_index", 0);
                 scr_var("image_speed", 0);
                 with (obj_lerpvar)

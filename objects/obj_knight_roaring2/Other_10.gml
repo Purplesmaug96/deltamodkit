@@ -115,7 +115,7 @@ if (timer > 128)
     }
     if (intensity == 3.74 && knight_sprite == 664)
     {
-        knight_sprite = 4962;
+        knight_sprite = spr_roaringknight_front_flourish;
         knight_sprite_image = 0;
         knight_sprite_speed = 0;
         scr_script_delayed(scr_lerpvar, 8, "knight_sprite_image", 0, 4, 16);
@@ -295,7 +295,7 @@ if (intensity == 4)
         sprite_index = spr_roaringknight_front_flourish;
         image_index = 0;
         image_speed = 0;
-        knight_sprite = 4962;
+        knight_sprite = spr_roaringknight_front_flourish;
         knight_sprite_speed = 0;
         scr_lerpvar("knight_sprite_image", 5.99, 0, 12);
         with (obj_knight_roaring_star)
