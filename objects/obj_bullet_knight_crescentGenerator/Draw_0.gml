@@ -1,4 +1,4 @@
-var knightsprite = 2128;
+var knightsprite = spr_roaringknight_attack_ol;
 var drawline = 0;
 if (con >= 1)
 {

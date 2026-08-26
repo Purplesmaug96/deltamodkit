@@ -1,0 +1,20 @@
+{
+  "$GMSound": "v2",
+  "%Name": "snd_leaf_dodge",
+  "audioGroupId": {
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
+  },
+  "bitDepth": 1,
+  "channelFormat": 0,
+  "compression": 0,
+  "compressionQuality": 4,
+  "conversionMode": 0,
+  "duration": 0.638685,
+  "exportedFileSize": 56376,
+  "name": "snd_leaf_dodge",
+  "resourceType": "GMSound",
+  "resourceVersion": "2.0",
+  "soundFile": "snd_leaf_dodge.wav",
+  "volume": 1.0,
+}

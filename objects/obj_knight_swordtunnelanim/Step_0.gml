@@ -4,7 +4,7 @@ if (con == 0)
     {
         if ((timer % 3) == 0)
         {
-            var snd = 226;
+            var snd = snd_leaf_dodge;
             snd_play_x(snd, 0.8 * fadeaudio, 1 + random(0.2));
             snd_play_x(snd, 0.8 * fadeaudio, 1 + random(0.2));
         }
@@ -47,7 +47,7 @@ if (con == 1)
     }
     if ((timer % 3) == 0)
     {
-        var snd = 226;
+        var snd = snd_leaf_dodge;
         snd_play_x(snd, (0.4 * shinkafade) + (leafpitch / 10), leafpitch + random_range(0, 0.2));
         snd_play_x(snd, (0.4 * shinkafade) + (leafpitch / 10), leafpitch + random_range(0, 0.2));
     }

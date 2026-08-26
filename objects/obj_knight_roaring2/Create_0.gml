@@ -25,8 +25,7 @@ line_timer = -1;
 r = 128;
 g = 128;
 b = 128;
-// UTMT's decompiler emits 664 for the knight_sprite var, hopefullu its spr_roaringknight_attack_ol
-knight_sprite = spr_roaringknight_attack_ol;
+knight_sprite = spr_roaringknight_front;
 knight_sprite_image = 0;
 knight_sprite_speed = 0.5;
 bobble_count = 0;
