@@ -333,7 +333,31 @@ if (finishattacktimer > 0)
         
         if (cancelattack == 0)
         {
+            var knightblock = 0;
+            if (i_ex(obj_knight_enemy) && obj_knight_enemy.blocking == 1 && obj_knight_enemy.damagereduction < 0.1)
+            {
+                knightblock = 1;
+            }
             damage = round(((global.battleat[myself] * points) / 20) - (global.monsterdf[global.chartarget[myself]] * 3));
+            if (i_ex(obj_knight_enemy))
+            {
+                damage = ceil(damage * obj_knight_enemy.damagereduction);
+                if (object_index == obj_herokris)
+                {
+                    if (global.hp[2] < 0 && global.hp[3] < 0)
+                    {
+                        damage *= 2;
+                    }
+                    else if (global.hp[2] < 0 || global.hp[3] < 0)
+                    {
+                        damage *= 1;
+                    }
+                    else
+                    {
+                        damage = round(damage * 0.5);
+                    }
+                }
+            }
             
             scr_damage_enemy(global.chartarget[myself], damage);
             dm.type = 0;
@@ -344,6 +368,12 @@ if (finishattacktimer > 0)
             if (damage > 0)
             {
                 scr_tensionheal(round(points / 10));
+                if (knightblock == 1)
+                {
+                    obj_knight_enemy.blockanim = 1;
+                }
+                if (knightblock == 0)
+                {
                 attack = instance_create(global.monsterx[global.chartarget[myself]] + random(6), global.monstery[global.chartarget[myself]] + random(6), obj_basicattack);
                     
                 if (object_index == obj_herosusie)
@@ -380,6 +410,7 @@ if (finishattacktimer > 0)
                 {
                     attack.image_xscale = 2.5;
                     attack.image_yscale = 2.5;
+                }
                 }
             }
         }

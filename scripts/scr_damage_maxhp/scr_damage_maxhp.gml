@@ -50,7 +50,7 @@ function scr_damage_maxhp(arg0 = 1, arg1 = false, arg2 = false)
 			}
 		}
 		chartarget = 3;
-		if (global.chapter == 3 && i_ex(obj_knight_enemy) && !i_ex(obj_knight_roaring2))
+		if (i_ex(obj_knight_enemy) && !i_ex(obj_knight_roaring2))
 		{
 			if (obj_knight_enemy.aoedamage == false)
 			{
@@ -151,7 +151,7 @@ function scr_damage_maxhp(arg0 = 1, arg1 = false, arg2 = false)
 				global.hp[chartarget] -= tdamage;
 				if (global.hp[chartarget] <= 0)
 				{
-					if (global.chapter == 3 && i_ex(obj_knight_enemy))
+					if (i_ex(obj_knight_enemy))
 					{
 						if (global.hp[1] < 0)
 						{

@@ -245,7 +245,7 @@ function scr_damage()
         }
         else
         {
-            if (global.chapter == 3 && i_ex(obj_knight_enemy) && obj_knight_enemy.myattackchoice == 2 && (obj_knight_enemy.difficulty == 1 || obj_knight_enemy.difficulty == 3))
+            if (i_ex(obj_knight_enemy) && obj_knight_enemy.myattackchoice == 2 && (obj_knight_enemy.difficulty == 1 || obj_knight_enemy.difficulty == 3))
             {
                 tdamage = round(tdamage * 0.66);
                 hpdiff = tdamage;

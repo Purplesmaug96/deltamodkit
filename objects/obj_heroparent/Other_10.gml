@@ -17,6 +17,26 @@ if (finishattacktimer > 0)
             
             dm.delay = 8;
             damage = round(((global.battleat[myself] * points) / 20) - (global.monsterdf[global.chartarget[myself]] * 3));
+
+            if (i_ex(obj_knight_enemy))
+            {
+                damage = ceil(damage * obj_knight_enemy.damagereduction);
+                if (object_index == obj_herokris)
+                {
+                    if (global.hp[2] < 0 && global.hp[3] < 0)
+                    {
+                        damage *= 2;
+                    }
+                    else if (global.hp[2] < 0 || global.hp[3] < 0)
+                    {
+                        damage *= 1;
+                    }
+                    else
+                    {
+                        damage = round(damage * 0.5);
+                    }
+                }
+            }
             
             if (global.monstertype[global.chartarget[myself]] == 19)
                 damage = ceil(damage * 0.3);
