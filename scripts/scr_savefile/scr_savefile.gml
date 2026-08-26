@@ -250,9 +250,8 @@ function scr_get_ura_value(arg0, arg1)
 function scr_set_ura_value(arg0, arg1, arg2)
 {
     var _ini_file = ossafe_ini_open("dr.ini");
-    var _ini_value = ini_write_real("URA", string(arg0) + "_" + string(arg1), arg2);
+    ini_write_real("URA", string(arg0) + "_" + string(arg1), arg2);
     ossafe_ini_close();
-    return _ini_value;
 }
 
 function scr_store_ura_result(arg0, arg1, arg2)
