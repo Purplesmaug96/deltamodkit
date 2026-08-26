@@ -757,24 +757,10 @@ if (global.monster[myself] == 1)
         {
             instance_destroy();
         }
-        if (scr_get_knight_total_attempts() > 0)
-        {
-            scr_gameover();
-        }
-        else
-        {
-            obj_battlecontroller.noreturn = 1;
-            obj_battlecontroller.intro = 2;
-            with (obj_tensionbar)
-            {
-                alarm[5] = 15;
-                hspeed = -10;
-                friction = -0.4;
-            }
-            mus_volume(global.batmusic[1], 0, 90);
-            event_user(3);
-            global.fighting = 0;
-        }
+        mus_volume(global.batmusic[1], 0, 90);
+        event_user(3);
+        global.fighting = 0;
+        scr_gameover();
     }
 }
 if (global.myfight == 3)
@@ -930,17 +916,10 @@ if (end_cutscene_version == 1)
         }
         // (obj_ch3_PTB02 not present in DMK; teamdefeated only mattered for its overworld cutscene)
         endcon = 2;
-        obj_battlecontroller.noreturn = 1;
-        obj_battlecontroller.intro = 2;
-        with (obj_tensionbar)
-        {
-            alarm[5] = 15;
-            hspeed = -10;
-            friction = -0.4;
-        }
+        mus_volume(global.batmusic[1], 0, 90);
         event_user(3);
         global.fighting = 0;
-        mus_volume(global.batmusic[1], 0, 90);
+        scr_wincombat();
     }
 }
 if (chargeupcon == 1)

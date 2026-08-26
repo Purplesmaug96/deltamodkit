@@ -1,4 +1,4 @@
-if (!other.active)
+if (!other.active && other.object_index != obj_sword_tunnel_sword)
     exit;
 
 var _grazetpfactor = grazetpfactor;
