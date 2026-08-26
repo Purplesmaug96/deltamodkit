@@ -85,15 +85,15 @@ function scr_damage()
         {
             if (target == 0)
             {
-                if (global.hp[1] > 0 && global.hp[2] > 0)
+                if (global.hp[2] > 0 && global.hp[3] > 0)
                 {
                     target = choose(1, 2);
                 }
-                else if (global.hp[1] > 0)
+                else if (global.hp[2] > 0)
                 {
                     target = 1;
                 }
-                else if (global.hp[2] > 0)
+                else if (global.hp[3] > 0)
                 {
                     target = 2;
                 }
