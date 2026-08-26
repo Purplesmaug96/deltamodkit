@@ -158,6 +158,7 @@ function scr_damage_maxhp(arg0 = 1, arg1 = false, arg2 = false)
 							global.hp[1] = 1;
 							hpdiff = round(global.hp[chartarget] - 1);
 							doomtype = 4;
+							scr_battle_sprite_set("kris", spr_kris_fallen_dark, 0.25, true);
 						}
 						else
 						{

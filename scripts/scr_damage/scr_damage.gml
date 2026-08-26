@@ -3,6 +3,15 @@ function scr_damage()
 	if global.inv > 0 return;
 	
     scr_damage_cache();
+
+    if (i_ex(obj_knight_enemy))
+    {
+        with (obj_knight_enemy)
+        {
+            progamer = false;
+        }
+    }
+
     var __element = 0;
         
     if (variable_instance_exists(id, "element") && is_real(element))
@@ -63,25 +72,143 @@ function scr_damage()
     }
         
     chartarget = 3;
-        
+
+    var truedamage = 0;
+    if (i_ex(obj_knight_roaring2))
+    {
+        truedamage = 1;
+    }
+
+    if (i_ex(obj_knight_enemy) && truedamage == 0)
+    {
+        if (obj_knight_enemy.aoedamage == false)
+        {
+            if (target == 0)
+            {
+                if (global.hp[1] > 0 && global.hp[2] > 0)
+                {
+                    target = choose(1, 2);
+                }
+                else if (global.hp[1] > 0)
+                {
+                    target = 1;
+                }
+                else if (global.hp[2] > 0)
+                {
+                    target = 2;
+                }
+            }
+            if (obj_knight_enemy.myattackchoice != 13)
+            {
+                if (global.chararmor1[1] == 23 || global.chararmor2[1] == 23 || global.chararmor1[2] == 23 || global.chararmor2[2] == 23 || global.chararmor1[3] == 23 || global.chararmor2[3] == 23)
+                {
+                    obj_knight_enemy.damagecounter++;
+                    if (obj_knight_enemy.damagecounter < 3)
+                    {
+                        if (global.hp[1] > 0 && (global.chararmor1[1] == 23 || global.chararmor2[1] == 23))
+                        {
+                            target = 0;
+                        }
+                        if (global.hp[2] > 0 && (global.chararmor1[2] == 23 || global.chararmor2[2] == 23))
+                        {
+                            target = 1;
+                        }
+                        if (global.hp[3] > 0 && (global.chararmor1[3] == 23 || global.chararmor2[3] == 23))
+                        {
+                            target = 2;
+                        }
+                    }
+                    else
+                    {
+                        target = choose(0, 1, 2);
+                        repeat (2)
+                        {
+                            if (global.hp[1] < 1 && target == 0)
+                            {
+                                target++;
+                            }
+                            if (global.hp[2] < 1 && target == 1)
+                            {
+                                target++;
+                            }
+                            if (global.hp[3] < 1 && target == 2)
+                            {
+                                target++;
+                            }
+                            if (target > 2)
+                            {
+                                target = 0;
+                            }
+                        }
+                        if ((target == 0 && global.chararmor1[1] == 23) || global.chararmor2[1] == 23)
+                        {
+                        }
+                        else if ((target == 1 && global.chararmor1[2] == 23) || global.chararmor2[2] == 23)
+                        {
+                        }
+                        else if ((target == 2 && global.chararmor1[3] == 23) || global.chararmor2[3] == 23)
+                        {
+                        }
+                        else
+                        {
+                            obj_knight_enemy.damagecounter = 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     tdamage = damage;
     var oldcalculation = 0;
+    var shadowmantlereduction = false;
         
     if (target < 3)
     {
-        if (oldcalculation)
+        if (truedamage == 1)
+        {
+            // knight final attack: true damage bypasses defense
+        }
+        else if (oldcalculation)
             tdamage = ceil(tdamage - (global.battledf[target] * 3));
         else
             tdamage = scr_damage_calculation(tdamage, target);
-            
+
         chartarget = global.char[target];
-            
-        if (global.charaction[target] == 10) // DEFEND
-            tdamage = ceil((2 * tdamage) / 3);
-            
-        tdamage = ceil(tdamage * scr_element_damage_reduction(__element, global.char[target]));
+
+        if (i_ex(obj_knight_enemy) && truedamage == 0)
+        {
+            if ((global.chararmor1[1] == 23 || global.chararmor2[1] == 23) && target == 0)
+            {
+                tdamage = round(tdamage * 0.33);
+                shadowmantlereduction = true;
+            }
+            if ((global.chararmor1[2] == 23 || global.chararmor2[2] == 23) && target == 1)
+            {
+                tdamage = round(tdamage * 0.33);
+                shadowmantlereduction = true;
+            }
+            if ((global.chararmor1[3] == 23 || global.chararmor2[3] == 23) && target == 2)
+            {
+                tdamage = round(tdamage * 0.33);
+                shadowmantlereduction = true;
+            }
+        }
+
+        if (truedamage == 1)
+        {
+            // true damage: skip defend and element reductions
+        }
+        else
+        {
+            if (global.charaction[target] == 10) // DEFEND
+                tdamage = ceil((2 * tdamage) / 3);
+
+            if (shadowmantlereduction == false)
+                tdamage = ceil(tdamage * scr_element_damage_reduction(__element, global.char[target]));
+        }
         show_debug_message("The element is: " + string(__element));
-            
+
         if (tdamage < 1)
             tdamage = 1;
     }
@@ -118,14 +245,40 @@ function scr_damage()
         }
         else
         {
+            if (global.chapter == 3 && i_ex(obj_knight_enemy) && obj_knight_enemy.myattackchoice == 2 && (obj_knight_enemy.difficulty == 1 || obj_knight_enemy.difficulty == 3))
+            {
+                tdamage = round(tdamage * 0.66);
+                hpdiff = tdamage;
+            }
+
             global.hp[chartarget] -= tdamage;
-                
+
             if (global.hp[chartarget] <= 0)
             {
-                hpdiff = abs(global.hp[chartarget] - (global.maxhp[chartarget] / 2));
-                doomtype = 4;
-                global.hp[chartarget] = round(-global.maxhp[chartarget] / 2);
-                scr_dead(target);
+                if (i_ex(obj_knight_enemy))
+                {
+                    if (target == 0)
+                    {
+                        hpdiff = abs(global.hp[chartarget] - (global.maxhp[chartarget] / 2));
+                        doomtype = 4;
+                        global.hp[chartarget] = round(-global.maxhp[chartarget] / 2);
+                        scr_dead(target);
+                    }
+                    else
+                    {
+                        doomtype = 12;
+                        hpdiff = round(global.hp[chartarget] + 999);
+                        global.hp[chartarget] = -999;
+                        scr_dead(target);
+                    }
+                }
+                else
+                {
+                    hpdiff = abs(global.hp[chartarget] - (global.maxhp[chartarget] / 2));
+                    doomtype = 4;
+                    global.hp[chartarget] = round(-global.maxhp[chartarget] / 2);
+                    scr_dead(target);
+                }
             }
         }
             
@@ -169,18 +322,24 @@ function scr_damage()
         }
     }
         
-    global.inv = global.invc * 40;
-        
+    if (global.chapter == 3)
+        global.inv = global.invc * 30;
+    else
+        global.inv = global.invc * 40;
+
     scr_damage_check();
     gameover = true;
-	
+
 	for (var i = 0; i < array_length(global.char); i++) {
 		if global.char[i] != DRCharacter.None && global.hp[global.char[i]] > 0 {
 			gameover = false;
-			break;	
+			break;
 		}
 	}
-        
+
+    if (i_ex(obj_knight_enemy))
+        gameover = false;
+
     if gameover
         scr_gameover();
         

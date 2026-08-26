@@ -11,10 +11,16 @@
   "compressionQuality": 4,
   "conversionMode": 0,
   "duration": 0.638685,
-  "exportedFileSize": 56376,
+  "exportDir": "",
   "name": "snd_leaf_dodge",
+  "parent": {
+    "name": "Sounds",
+    "path": "folders/Custom/Sounds.yy",
+  },
+  "preload": false,
   "resourceType": "GMSound",
   "resourceVersion": "2.0",
+  "sampleRate": 44100,
   "soundFile": "snd_leaf_dodge.wav",
   "volume": 1.0,
 }
