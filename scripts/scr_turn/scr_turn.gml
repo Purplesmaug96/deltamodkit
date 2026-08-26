@@ -49,7 +49,7 @@ function scr_mnendturn()
             
             if (global.char[i] != 0 && global.hp[hptarget] <= 0)
             {
-                if (!i_ex(obj_knight_enemy))
+                if (!i_ex(obj_knight_enemy)) {
                     healamt = ceil(global.maxhp[hptarget] / 8);
                     dmgwr = instance_create(global.charinstance[i].x, (global.charinstance[i].y + global.charinstance[i].myheight) - 24, obj_dmgwriter);
 

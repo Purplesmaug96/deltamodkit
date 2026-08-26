@@ -137,7 +137,8 @@ function sunkus_kb_check_released(arg0)
 
 function sunkus_kb_check_direct(arg0)
 {
-    return global.kbdBlocked ? false : keyboard_check_direct(arg0);
+    if (global.kbdBlocked) return false;
+    return global.is_native ? keyboard_check_direct(arg0) : keyboard_check(arg0);
 }
 
 function sunkus_kb_clear(arg0)

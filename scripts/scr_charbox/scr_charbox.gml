@@ -113,9 +113,9 @@ function scr_charbox(){
             draw_set_color(c_red);
             
         draw_set_halign(fa_right);
-        draw_text(xx + 160 + xchunk, ((bpoff + b_offset) - 2) + boxcasingy, string_hash_to_newline(global.hp[c + 1]));
+        draw_text(xx + 160 + xchunk, ((bpoff + b_offset) - 2) + boxcasingy, string_hash_to_newline(string(global.hp[c + 1])));
         draw_sprite(spr_hpslash, 0, xx + 159 + xchunk, ((bpoff + b_offset) - 4) + boxcasingy);
-        draw_text(xx + 205 + xchunk, ((bpoff + b_offset) - 2) + boxcasingy, string_hash_to_newline(global.maxhp[c + 1]));
+        draw_text(xx + 205 + xchunk, ((bpoff + b_offset) - 2) + boxcasingy, string_hash_to_newline(string(global.maxhp[c + 1])));
         draw_set_halign(fa_left);
         draw_set_color(c_maroon);
         draw_rectangle(xx + 128 + xchunk, bpoff + b_offset + 11 + boxcasingy, xx + 203 + xchunk, bpoff + b_offset + 19 + boxcasingy, false);

@@ -2,6 +2,7 @@ function draw_text_outline(x, y, text, color = c_black, thickness = 1)
 {
     resetcolor = draw_get_color();
     var _s = thickness;
+    text = string_hash_to_newline(string(text));
     draw_set_color(c_black);
     
     if (argument_count >= 4)
@@ -37,6 +38,7 @@ function scr_84_draw_text_outline(x, y, text)
 
 function draw_text_shadow(x, y, text)
 {
+    text = string(text);
     __txtcolor__ = draw_get_color();
     draw_set_color(c_black);
     draw_text(x + 1, y + 1, string_hash_to_newline(text));
@@ -46,6 +48,7 @@ function draw_text_shadow(x, y, text)
 
 function draw_text_shadow_width(x, y, text, width)
 {
+    text = string(text);
     __txtcolor__ = draw_get_color();
     draw_set_color(c_black);
     draw_text_width(x + 1, y + 1, string_hash_to_newline(text), width);

@@ -1,10 +1,11 @@
 global.is_console = /*scr_is_switch_os() || */os_type == os_ps4 || os_type == os_ps5;
+global.is_native = (os_browser == os_no_browser);
 
 global.charname = [];
 repeat DRCharacter.__MAX__ array_push(global.charname, "???")
 scr_character_set_names()
 
-if (!global.is_console) window_enable_borderless_fullscreen(true);
+if (global.is_native) window_enable_borderless_fullscreen(true);
 
 global.debug = DEBUGMODE;
 var launch_data = scr_init_launch_parameters();
