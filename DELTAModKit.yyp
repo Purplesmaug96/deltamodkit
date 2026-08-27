@@ -373,6 +373,7 @@
     {"id":{"name":"obj_move_actor","path":"objects/obj_move_actor/obj_move_actor.yy",},},
     {"id":{"name":"obj_move_to_point","path":"objects/obj_move_to_point/obj_move_to_point.yy",},},
     {"id":{"name":"obj_moveheart","path":"objects/obj_moveheart/obj_moveheart.yy",},},
+    {"id":{"name":"obj_npc_room_1","path":"objects/obj_npc_room_1/obj_npc_room_1.yy",},},
     {"id":{"name":"obj_npc_room","path":"objects/obj_npc_room/obj_npc_room.yy",},},
     {"id":{"name":"obj_oflash","path":"objects/obj_oflash/obj_oflash.yy",},},
     {"id":{"name":"obj_overworldc","path":"objects/obj_overworldc/obj_overworldc.yy",},},

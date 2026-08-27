@@ -12,6 +12,8 @@ var launch_data = scr_init_launch_parameters();
 global.launcher = launch_data.is_launcher;
 textures_loaded = false;
 
+global.knight_harder = false;
+
 if (global.is_console)
     gpu_set_texfilter(false);
 

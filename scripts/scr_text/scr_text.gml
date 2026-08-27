@@ -22,6 +22,27 @@ function scr_text_extra(msc){
 			break;
 		}
 		
+		case SCRTEXT_Choices_KnightHarder: {
+			scr_speaker("no_name");
+			global.choicemsg[0] = "#Yes";
+			global.choicemsg[1] = "#No";
+			global.choicemsg[2] = " ";
+			global.choicemsg[3] = " ";
+			
+			break;	
+		}
+		
+		case SCRTEXT_Choices_KnightHarder+1: {
+			global.knight_harder = global.choice == 0;
+			if (global.knight_harder) {
+				msgset(0, "* (They're harder now.)/%");
+			}
+			else {
+				msgset(0, "* (They're normal now.)/%");
+			}
+			break;
+		}
+		
 		default: {
 			handled = false;
 			break;
@@ -37,3 +58,4 @@ function scr_text(msc) {
 }
 
 #macro SCRTEXT_Choices_ExampleChoice 10000
+#macro SCRTEXT_Choices_KnightHarder 20000

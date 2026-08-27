@@ -49,7 +49,7 @@ function scr_encounter_get(encId) {
 			enemytemp[0].xx = xx + 425;
 			enemytemp[0].yy = yy + 78;
 			
-			global.battlemsg[0] = "* The Roaring Papyrus appeared.";
+			global.battlemsg[0] = "* The Roaring Knight appeared.";
 		}
 	}
 }
@@ -117,7 +117,7 @@ function scr_monstersetup()
 	case DREnemy.RoaringKnight:
         global.monstername[myself] = "Knight";
         global.monstermaxhp[myself] = 7300;
-        global.monsterhp[myself] = 7300;
+        global.monsterhp[myself] = global.monstermaxhp[myself];
         global.monsterat[myself] = 40;
         global.monsterdf[myself] = 0;
         global.monsterexp[myself] = 0;

@@ -257,7 +257,7 @@ function scr_damage()
             {
                 if (i_ex(obj_knight_enemy))
                 {
-                    if (target == 0)
+                    if (!global.knight_harder && target == 0)
                     {
                         hpdiff = abs(global.hp[chartarget] - (global.maxhp[chartarget] / 2));
                         doomtype = 4;
@@ -267,8 +267,9 @@ function scr_damage()
                     else
                     {
                         doomtype = 12;
-                        hpdiff = round(global.hp[chartarget] + 999);
-                        global.hp[chartarget] = -999;
+						var swoon_dmg = global.knight_harder ? 9999 : 999;
+                        hpdiff = round(global.hp[chartarget] + swoon_dmg);
+                        global.hp[chartarget] = -swoon_dmg;
                         scr_dead(target);
                     }
                 }
