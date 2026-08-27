@@ -39,7 +39,7 @@ if (instance_number(obj_time) > 1)
 else
 {
     ini_open("true_config.ini");
-    var fullscreen_option = ini_read_real("SCREEN", "FULLSCREEN", 0);
+    var fullscreen_option = ini_read_real("SCREEN", "FULLSCREEN", !global.is_native);
     ini_close();
     var display_height = display_get_height();
     var display_width = display_get_width();
