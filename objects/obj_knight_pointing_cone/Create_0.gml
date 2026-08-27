@@ -10,6 +10,7 @@ angle_lerp = 0;
 image_xscale = 2;
 image_yscale = 2;
 image_speed = 0;
+if (global.knight_harder) image_blend = c_red;
 if (i_ex(obj_knight_enemy))
 {
     obj_knight_enemy.visible = false;

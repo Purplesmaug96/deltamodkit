@@ -98,3 +98,5 @@ with (obj_herosusie)
 // }
 // instance_create(x, y, obj_bgfountaintest);
 global.tempflag[96] = 0;
+
+if (global.knight_harder) image_blend = c_red;

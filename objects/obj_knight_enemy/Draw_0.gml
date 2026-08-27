@@ -55,6 +55,7 @@ if (state == 0 || state == 3)
         afterimage.image_speed = 0;
         afterimage.image_xscale = image_xscale;
         afterimage.image_yscale = image_yscale;
+		afterimage.image_blend = image_blend
     }
 }
 if (end_cutscene_version == 1)
