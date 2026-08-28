@@ -11,7 +11,7 @@ repeat (6)
         with (instance_create(x, y, obj_knight_weird_circle))
         {
             angle = (360 / other.circle_goal) * ds_list_size(other.circle_list);
-            distance = other.circle_distance;
+            orbit_distance = other.circle_distance;
             spin = other.spin;
             master = other.id;
             alarm[0] = 6;

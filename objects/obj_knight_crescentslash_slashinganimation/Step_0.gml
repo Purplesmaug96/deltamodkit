@@ -4,11 +4,11 @@ if (image_index > 7)
 }
 if (image_index >= 5)
 {
-    image_blend = merge_color(c_white, c_black, 0.4);
+    image_blend = merge_color(c_red, c_black, 0.4);
 }
 if (image_index >= 6)
 {
-    image_blend = merge_color(c_white, c_black, 0.8);
+    image_blend = merge_color(c_red, c_black, 0.8);
 }
 if (image_index >= 7)
 {

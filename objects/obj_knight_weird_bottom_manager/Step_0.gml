@@ -39,8 +39,8 @@ if (local_turntimer < 112 && next_up == 4 && turn_segment == -1)
 }
 with (obj_knight_weird_circle)
 {
-    x = other.center_x + lengthdir_x(distance, angle + other.angle);
-    y = other.center_y + lengthdir_y(distance * 0.25, angle + other.angle);
+    x = other.center_x + lengthdir_x(orbit_distance, angle + other.angle);
+    y = other.center_y + lengthdir_y(orbit_distance * 0.25, angle + other.angle);
 }
 if ((global.time % 4) == 0 && image_alpha != 0)
 {

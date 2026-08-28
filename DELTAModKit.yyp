@@ -965,6 +965,7 @@
     {"id":{"name":"spr_knight_bullet_star_top","path":"sprites/spr_knight_bullet_star_top/spr_knight_bullet_star_top.yy",},},
     {"id":{"name":"spr_knight_bullet_star","path":"sprites/spr_knight_bullet_star/spr_knight_bullet_star.yy",},},
     {"id":{"name":"spr_knight_crescentslash","path":"sprites/spr_knight_crescentslash/spr_knight_crescentslash.yy",},},
+    {"id":{"name":"spr_knight_diagonalbullet","path":"sprites/spr_knight_diagonalbullet/spr_knight_diagonalbullet.yy",},},
     {"id":{"name":"spr_knight_diamondbullet_l","path":"sprites/spr_knight_diamondbullet_l/spr_knight_diamondbullet_l.yy",},},
     {"id":{"name":"spr_knight_diamondbullet_m","path":"sprites/spr_knight_diamondbullet_m/spr_knight_diamondbullet_m.yy",},},
     {"id":{"name":"spr_knight_diamondswordbullet","path":"sprites/spr_knight_diamondswordbullet/spr_knight_diamondswordbullet.yy",},},

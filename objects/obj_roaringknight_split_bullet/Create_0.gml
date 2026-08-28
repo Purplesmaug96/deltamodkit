@@ -14,3 +14,4 @@ turn_start = false;
 gt_dist = 0;
 anim_timer = 0;
 image_speed = 0;
+if (global.knight_harder) image_blend = c_red;

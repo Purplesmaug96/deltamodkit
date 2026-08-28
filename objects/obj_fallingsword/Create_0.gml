@@ -23,3 +23,4 @@ for (i = 1; i < max_old; i++)
 }
 speed_gain = 0.4;
 finalsword = false;
+image_blend = c_red;

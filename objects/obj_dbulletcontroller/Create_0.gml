@@ -10,6 +10,8 @@ grazetimer = -1;
 element = "none";
 target = -1;
 ratio = 1;
+delay = 0;
+subdelay = 0;
 
 if (scr_monsterpop() == 2)
     ratio = 1.6;

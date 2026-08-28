@@ -1,5 +1,5 @@
 angle = 0;
-distance = 0;
+orbit_distance = 0;
 spin = 0;
 master = id;
 timer = 0;
