@@ -613,8 +613,18 @@ if (global.monster[myself] == 1)
                 dc.difficulty = difficulty;
                 global.invc = 0.4;
 			}
-			
-            if (myattackchoice == 7)
+			else if (myattackchoice == 203) {
+				global.monsterattackname[myself] = "snowfall";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.SnowFall;
+                dc.difficulty = difficulty;
+                global.invc = 0.4;
+			}
+			if (myattackchoice == 203)
+            {
+                scr_turntimer(400);
+            }
+            else if (myattackchoice == 7)
             {
                 scr_turntimer(270);
             }

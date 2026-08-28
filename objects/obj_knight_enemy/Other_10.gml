@@ -72,17 +72,17 @@ if (global.knight_harder) {
 	    }
 	    if (phaseturn == 3)
 	    {
-	        myattackchoice = 13;
+	        myattackchoice = 203;
 	        difficulty = 3;
 	    }
 	    if (phaseturn == 4)
 	    {
-	        myattackchoice = 15;
+	        myattackchoice = 204;
 	        difficulty = 0;
 	    }
 	    if (phaseturn == 5)
 	    {
-	        myattackchoice = 5;
+	        myattackchoice = 205;
 	        difficulty = 1;
 	        phase = 3;
 	        phaseturn = 0;

@@ -12,8 +12,8 @@
   "name":"obj_tracking_swords_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Battle",
-    "path":"folders/DELTARUNE/Scripts/Battle.yy",
+    "name":"Objects",
+    "path":"folders/Custom/Scripts/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_regularbullet",

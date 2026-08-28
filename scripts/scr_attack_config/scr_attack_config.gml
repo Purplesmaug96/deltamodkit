@@ -17,7 +17,8 @@ enum DRBulletPattern {
 	TrackingSwords = 151,
 	DiagonalBullets = 152,
 	SwordTunnelNew = 153,
-	SwordVortex = 154
+	SwordVortex = 154,
+	SnowFall = 155
 }
 
 function scr_bullet_pattern(bulletPatternId) {
@@ -412,6 +413,16 @@ function scr_bullet_pattern(bulletPatternId) {
 				scr_bullet_inherit(_manager);
 				_manager.variant = difficulty;
 				_manager.damage = damage;
+				made = true;
+			}
+			break;
+		}
+		case DRBulletPattern.SnowFall: {
+			if (!made)
+			{
+				var _manager = instance_create(obj_growtangle.x, cameray(), obj_knight_snow_manager);
+				scr_bullet_inherit(_manager);
+				_manager.difficulty = difficulty;
 				made = true;
 			}
 			break;

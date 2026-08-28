@@ -1,0 +1,12 @@
+timer = 0;
+con = 0;
+scr_bullet_init();
+destroyonhit = 0;
+wall_destroy = 0;
+noenddestroy = true;
+_direction = 60 + random_range(-20, 20);
+_speed = 3 + random_range(0, 4);
+speedincrease = 0.01;
+scale = random_range(0.8, 1.2);
+image_xscale = scale;
+image_yscale = scale;

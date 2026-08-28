@@ -996,7 +996,8 @@ if (global.mnfight == 2 && timeron == 1)
     if (global.turntimer <= 0 && reset == 0)
     {
         with (obj_bulletparent)
-            instance_destroy();
+            if (!variable_instance_exists(id, "noenddestroy") || !noenddestroy)
+                instance_destroy();
         
         with (obj_bulletgenparent)
             instance_destroy();

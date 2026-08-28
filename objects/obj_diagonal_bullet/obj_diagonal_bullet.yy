@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_knight_diagonalbullet",
-    "path":"sprites/spr_knight_diagonalbullet/spr_knight_diagonalbullet.yy",
+    "name":"spr_knight_smallbullet",
+    "path":"sprites/spr_knight_smallbullet/spr_knight_smallbullet.yy",
   },
   "spriteMaskId":null,
   "visible":true,
