@@ -620,6 +620,14 @@ if (global.monster[myself] == 1)
                 dc.difficulty = difficulty;
                 global.invc = 0.4;
 			}
+			else if (myattackchoice == 204) {
+				global.monsterattackname[myself] = "swordcircle";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.SwordCircle;
+                dc.difficulty = difficulty;
+                global.invc = 0.4;
+			}
+			
 			if (myattackchoice == 203)
             {
                 scr_turntimer(400);

@@ -343,6 +343,8 @@
     {"id":{"name":"obj_knight_split_growtangle","path":"objects/obj_knight_split_growtangle/obj_knight_split_growtangle.yy",},},
     {"id":{"name":"obj_knight_stream","path":"objects/obj_knight_stream/obj_knight_stream.yy",},},
     {"id":{"name":"obj_knight_streamline","path":"objects/obj_knight_streamline/obj_knight_streamline.yy",},},
+    {"id":{"name":"obj_knight_swordcircle_bullet","path":"objects/obj_knight_swordcircle_bullet/obj_knight_swordcircle_bullet.yy",},},
+    {"id":{"name":"obj_knight_swordcircle_manager","path":"objects/obj_knight_swordcircle_manager/obj_knight_swordcircle_manager.yy",},},
     {"id":{"name":"obj_knight_swordfall","path":"objects/obj_knight_swordfall/obj_knight_swordfall.yy",},},
     {"id":{"name":"obj_knight_swordtunnelanim","path":"objects/obj_knight_swordtunnelanim/obj_knight_swordtunnelanim.yy",},},
     {"id":{"name":"obj_knight_tunnel_slasher_2_revised","path":"objects/obj_knight_tunnel_slasher_2_revised/obj_knight_tunnel_slasher_2_revised.yy",},},
