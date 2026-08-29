@@ -3,7 +3,7 @@ enum DRBulletPattern {
 	RisingDiamonds = 1,
 	SwordThrow = 2, // in vanilla deltarune, this attack has the value of 3, but i dont care
 	Stars = 98,
-	Flurry = 99,
+	KnightSplitter = 99,
 	KnightSlash = 100,
 	KnightLines = 101,
 	SwordTunnel = 102,
@@ -178,7 +178,7 @@ function scr_bullet_pattern(bulletPatternId) {
 			}
 			break;
 		}
-		case DRBulletPattern.Flurry: {
+		case DRBulletPattern.KnightSplitter: {
 			if (!made)
 			{
 				with (creatorid)

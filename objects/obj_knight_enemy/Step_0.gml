@@ -402,7 +402,7 @@ if (global.monster[myself] == 1)
             {
                 global.monsterattackname[myself] = "Flurry";
                 dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
-                dc.type = DRBulletPattern.Flurry;
+                dc.type = DRBulletPattern.KnightSplitter;
                 dc.difficulty = difficulty;
                 global.invc = 0.4;
             }
@@ -553,7 +553,7 @@ if (global.monster[myself] == 1)
 			else if (myattackchoice == 102) {
 				global.monsterattackname[myself] = "Flurry";
                 dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
-                dc.type = DRBulletPattern.Flurry;
+                dc.type = DRBulletPattern.KnightSplitter;
                 dc.difficulty = difficulty;
                 global.invc = 0.4;
 				global.monsterattackname[myself] = "swords falling";
@@ -631,6 +631,16 @@ if (global.monster[myself] == 1)
                 dc.type = DRBulletPattern.SwordVortex;
                 dc.difficulty = 3;
                 dc.damage = 206;
+				global.monsterattackname[myself] = "heartfollower";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.KnightHeartFollower;
+			}
+			else if (myattackchoice == 205) {
+				global.monsterattackname[myself] = "Flurry";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.KnightSplitter;
+                dc.difficulty = 2;
+                global.invc = 0.4;
 				global.monsterattackname[myself] = "heartfollower";
                 dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
                 dc.type = DRBulletPattern.KnightHeartFollower;
