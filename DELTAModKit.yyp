@@ -422,6 +422,7 @@
     {"id":{"name":"obj_sword_tunnel_manager","path":"objects/obj_sword_tunnel_manager/obj_sword_tunnel_manager.yy",},},
     {"id":{"name":"obj_sword_tunnel_sword","path":"objects/obj_sword_tunnel_sword/obj_sword_tunnel_sword.yy",},},
     {"id":{"name":"obj_sword_vortex_manager","path":"objects/obj_sword_vortex_manager/obj_sword_vortex_manager.yy",},},
+    {"id":{"name":"obj_sword_vortex","path":"objects/obj_sword_vortex/obj_sword_vortex.yy",},},
     {"id":{"name":"obj_tensionbar","path":"objects/obj_tensionbar/obj_tensionbar.yy",},},
     {"id":{"name":"obj_time","path":"objects/obj_time/obj_time.yy",},},
     {"id":{"name":"obj_tracking_sword_slash_extra_graze","path":"objects/obj_tracking_sword_slash_extra_graze/obj_tracking_sword_slash_extra_graze.yy",},},

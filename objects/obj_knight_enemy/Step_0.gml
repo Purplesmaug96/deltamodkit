@@ -626,6 +626,11 @@ if (global.monster[myself] == 1)
                 dc.type = DRBulletPattern.SwordCircle;
                 dc.difficulty = difficulty;
                 global.invc = 0.4;
+				global.monsterattackname[myself] = "sword vortex";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.SwordVortex;
+                dc.difficulty = 3;
+                dc.damage = 206;
 			}
 			
 			if (myattackchoice == 203)
