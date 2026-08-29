@@ -5,6 +5,8 @@ if (timer > 1000)
     instance_destroy();
 }
 
+image_angle = -_direction;
+
 if (timer < 50) exit;
 
 _speed += speedincrease;
