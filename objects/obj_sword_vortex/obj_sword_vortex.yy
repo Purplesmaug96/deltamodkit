@@ -13,7 +13,10 @@
     "name":"Objects",
     "path":"folders/Custom/Scripts/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_regularbullet",
+    "path":"objects/obj_regularbullet/obj_regularbullet.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -19,7 +19,8 @@ enum DRBulletPattern {
 	SwordTunnelNew = 153,
 	SwordVortex = 154,
 	SnowFall = 155,
-	SwordCircle = 156
+	SwordCircle = 156,
+	KnightHeartFollower = 157
 }
 
 function scr_bullet_pattern(bulletPatternId) {
@@ -432,6 +433,16 @@ function scr_bullet_pattern(bulletPatternId) {
 			if (!made)
 			{
 				var _manager = instance_create(obj_growtangle.x, cameray(), obj_knight_swordcircle_manager);
+				scr_bullet_inherit(_manager);
+				_manager.difficulty = difficulty;
+				made = true;
+			}
+			break;
+		}
+		case DRBulletPattern.KnightHeartFollower: {
+			if (!made)
+			{
+				var _manager = instance_create(obj_growtangle.x, cameray(), obj_knight_heartfollower_manager);
 				scr_bullet_inherit(_manager);
 				_manager.difficulty = difficulty;
 				made = true;

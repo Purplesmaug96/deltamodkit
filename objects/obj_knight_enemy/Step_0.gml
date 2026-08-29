@@ -631,6 +631,9 @@ if (global.monster[myself] == 1)
                 dc.type = DRBulletPattern.SwordVortex;
                 dc.difficulty = 3;
                 dc.damage = 206;
+				global.monsterattackname[myself] = "heartfollower";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.KnightHeartFollower;
 			}
 			
 			if (myattackchoice == 203)

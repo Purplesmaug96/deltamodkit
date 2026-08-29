@@ -1,8 +1,4 @@
 image_alpha += 0.1;
-if (!i_ex(obj_sword_vortex_manager))
-{
-    instance_destroy();
-}
 dir -= (spinspeed * lerp(2, 1, len / 120));
 image_angle = dir - 90;
 if (i_ex(obj_sword_vortex_manager))
