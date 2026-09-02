@@ -268,7 +268,7 @@ function scr_damage()
                     {
                         doomtype = 12;
 						var swoon_dmg = global.knight_harder ? 9999 : 999;
-						if (DEBUGMODE) swoon_dmg = -999;
+						// if (DEBUGMODE) swoon_dmg = -999;
                         hpdiff = round(global.hp[chartarget] + swoon_dmg);
                         global.hp[chartarget] = -swoon_dmg;
                         scr_dead(target);

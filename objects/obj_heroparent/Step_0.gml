@@ -33,6 +33,7 @@ if (global.hp[global.char[myself]] > 0)
         {
             thissprite = defeatsprite;
             global.faceaction[myself] = 9;
+			if (i_ex(obj_knight_enemy) && global.knight_harder) scr_herodeath();
         }
         
         if (global.faceaction[myself] == 4)
@@ -278,6 +279,8 @@ else
     thissprite = defeatsprite;
     index = 0;
     siner += 1;
+	
+	if (i_ex(obj_knight_enemy) && global.knight_harder) scr_herodeath();
 }
 
 if (global.targeted[myself] != 1)

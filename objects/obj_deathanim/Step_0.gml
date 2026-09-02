@@ -22,7 +22,7 @@ if (t == 0)
             bh[i][j] = j * bsize;
             bx[i][j] = x + (i * bsize * imgx);
             bspeed[i][j] = 0;
-            bsin[i][j] = (4 + (j * 3)) - i;
+            bsin[i][j] = (4 + (j * 3)) - (dir == 1 ? i : (xs - i));
         }
     }
 }
@@ -41,7 +41,7 @@ if (t >= 1)
             if (bsin[i][j] <= 0)
                 bspeed[i][j] += 1;
             
-            bx[i][j] += bspeed[i][j];
+            bx[i][j] += bspeed[i][j] * dir;
             bsin[i][j] -= 1;
         }
     }
