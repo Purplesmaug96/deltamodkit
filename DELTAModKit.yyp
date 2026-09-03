@@ -537,6 +537,7 @@
     {"id":{"name":"scr_heartclamp","path":"scripts/scr_heartclamp/scr_heartclamp.yy",},},
     {"id":{"name":"scr_herodeath","path":"scripts/scr_herodeath/scr_herodeath.yy",},},
     {"id":{"name":"scr_heroes_config","path":"scripts/scr_heroes_config/scr_heroes_config.yy",},},
+    {"id":{"name":"scr_html5_refit_size","path":"scripts/scr_html5_refit_size/scr_html5_refit_size.yy",},},
     {"id":{"name":"scr_interact","path":"scripts/scr_interact/scr_interact.yy",},},
     {"id":{"name":"scr_inverselerp","path":"scripts/scr_inverselerp/scr_inverselerp.yy",},},
     {"id":{"name":"scr_item","path":"scripts/scr_item/scr_item.yy",},},

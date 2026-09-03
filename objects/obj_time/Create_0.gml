@@ -38,6 +38,9 @@ if (instance_number(obj_time) > 1)
 }
 else
 {
+    last_browser_width = browser_width;
+    last_browser_height = browser_height;
+    
     ini_open("true_config.ini");
     var fullscreen_option = ini_read_real("SCREEN", "FULLSCREEN", !global.is_native);
     ini_close();

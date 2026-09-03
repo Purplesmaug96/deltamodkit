@@ -17,11 +17,14 @@ if (surface_exists(terrible_surface))
 ds_list_destroy(bullet_list);
 sprite_delete(fakey_screen);
 sprite_delete(fakey_screen_2);
-with (obj_knight_enemy)
+if (i_ex(obj_knight_enemy))
 {
-    image_alpha = 1;
-    siner2 = 0;
-    chargeupcon = 0;
+    with (obj_knight_enemy)
+    {
+        image_alpha = 1;
+        siner2 = 0;
+        chargeupcon = 0;
+    }
 }
 snd_stop(snd_knight_stretch);
 snd_stop(snd_knight_roar);

@@ -1,5 +1,8 @@
-with (obj_knight_enemy)
+if (i_ex(obj_knight_enemy))
 {
-    visible = true;
-    image_alpha = 1;
+    with (obj_knight_enemy)
+    {
+        visible = true;
+        image_alpha = 1;
+    }
 }

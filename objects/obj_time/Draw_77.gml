@@ -49,8 +49,17 @@ if (!global.is_console)
         
         if (!nowfullscreen)
         {
-            window_set_size(640 * window_size_multiplier, 480 * window_size_multiplier);
-            alarm[2] = 1;
+            if (global.is_native)
+            {
+                window_set_size(640 * window_size_multiplier, 480 * window_size_multiplier);
+                alarm[2] = 1;
+            }
+            else
+            {
+                last_browser_width = browser_width;
+                last_browser_height = browser_height;
+                scr_html5_refit_size();
+            }
         }
     }
     

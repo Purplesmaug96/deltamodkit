@@ -1,5 +1,12 @@
 scr_input_manager_process();
 
+if (!global.is_native && !window_get_fullscreen() && (browser_width != last_browser_width || browser_height != last_browser_height))
+{
+    last_browser_width = browser_width;
+    last_browser_height = browser_height;
+    scr_html5_refit_size();
+}
+
 if (!paused) global.time += 1;
 else return;
 
