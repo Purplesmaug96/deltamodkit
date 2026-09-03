@@ -364,9 +364,15 @@ function scr_itemshift_temp(arg0, arg1)
         tempitem[i][arg1] = tempitem[i + 1][arg1];
 }
 
-function scr_healitem(chara, amnt)
+function scr_healitem(chara, amnt, revive = false)
 {
-    scr_heal(chara, amnt);
+    if (revive == false && i_ex(obj_knight_enemy) && global.knight_harder && global.hp[global.char[chara]] <= -9999)
+    {
+        scr_heal_swoon_miss(chara);
+        return;
+    }
+    
+    scr_heal(chara, amnt, revive);
     healx = scr_charbox_x(chara);
     healtext = instance_create(healx + 70 + xx, yy + 430, obj_healwriter);
     healtext.healamt = amnt;
@@ -374,10 +380,11 @@ function scr_healitem(chara, amnt)
 
 function scr_healitem_all(amnt)
 {
-    scr_healall(amnt);
+    scr_healall(amnt, false);
     
     for (i = 0; i < chartotal; i += 1)
     {
+        if (i_ex(obj_knight_enemy) && global.knight_harder && global.hp[global.char[i]] <= -9999) continue;
         healx = scr_charbox_x(i);
         healtext = instance_create(healx + 70 + xx, yy + 430, obj_healwriter);
         healtext.healamt = amnt;

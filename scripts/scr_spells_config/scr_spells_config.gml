@@ -294,6 +294,14 @@ function scr_spell_use_action(casterid, spellid) {
         case DRSpell.HealPrayer: {
 			var _buff = 0;
             healnum = scr_heal_amount_modify_by_equipment(global.battlemag[casterid] * (5 + _buff));
+            
+            if (i_ex(obj_knight_enemy) && global.knight_harder && global.hp[global.char[star]] <= -9999)
+            {
+                scr_heal_swoon_miss(star);
+                global.spelldelay = 15;
+                break;
+            }
+            
             scr_heal(star, healnum);
             global.charinstance[star].healnum = healnum;
             
@@ -434,8 +442,10 @@ function scr_spell_use_action(casterid, spellid) {
             
             for (i = 0; i < 3; i += 1)
             {
+                if (global.char[i] == 0) continue;
                 scr_heal(i, healnum);
                 global.charinstance[i].healnum = healnum;
+                if (i_ex(obj_knight_enemy) && global.knight_harder && global.hp[global.char[i]] <= -9999) continue;
                 
                 with (global.charinstance[i])
                 {
@@ -533,6 +543,14 @@ function scr_spell_use_action(casterid, spellid) {
                 global.flag[1045] = 5;
             
             healnum = ceil(scr_heal_amount_modify_by_equipment((global.battlemag[casterid] * 1.5) + 5 + (1 * global.flag[1045])));
+            
+            if (i_ex(obj_knight_enemy) && global.knight_harder && global.hp[global.char[star]] <= -9999)
+            {
+                scr_heal_swoon_miss(star);
+                global.spelldelay = 15;
+                break;
+            }
+            
             scr_heal(star, healnum);
             global.charinstance[star].healnum = healnum;
             

@@ -5,8 +5,27 @@ function scr_revive(char)
     global.chardead[char] = 0;
 }
 
-function scr_heal(char, amnt)
+function scr_heal_swoon_miss(chara)
 {
+    var ch = global.charinstance[chara];
+    if (!instance_exists(ch)) return;
+    var dmgwr = instance_create(ch.x, (ch.y + ch.myheight) - 24, obj_dmgwriter);
+    with (dmgwr)
+    {
+        delay = 8;
+        type = 3;
+        damage = 0;
+    }
+}
+
+function scr_heal(char, amnt, revive = false)
+{
+    if (revive == false && i_ex(obj_knight_enemy) && global.knight_harder && global.hp[global.char[char]] <= -9999)
+    {
+        scr_heal_swoon_miss(char);
+        return 0;
+    }
+    
     abovemaxhp = 0;
     belowzero = 0;
     hltarget = global.char[char];
@@ -39,12 +58,12 @@ function scr_heal(char, amnt)
     return global.hp[hltarget] - _curhp;
 }
 
-function scr_healall(amnt)
+function scr_healall(amnt, revive = false)
 {
     for (i = 0; i < 3; i += 1)
     {
         if (global.char[i] != 0)
-            scr_heal(i, amnt);
+            scr_heal(i, amnt, revive);
     }
 }
 
@@ -62,10 +81,16 @@ function scr_heal_amount_modify_by_equipment(arg0)
     return ___healAmount + ___healAdd;
 }
 
-function scr_healitemspell(healamnt)
+function scr_healitemspell(healamnt, revive = false)
 {
+    if (revive == false && i_ex(obj_knight_enemy) && global.knight_harder && global.hp[global.char[star]] <= -9999)
+    {
+        scr_heal_swoon_miss(star);
+        return noone;
+    }
+    
     var __healAmount = scr_heal_amount_modify_by_equipment(healamnt);
-    scr_heal(star, __healAmount);
+    scr_heal(star, __healAmount, revive);
     global.spelldelay = 15;
     
     with (global.charinstance[star])
@@ -92,13 +117,15 @@ function scr_healitemspell(healamnt)
     }
 }
 
-function scr_healallitemspell(healamnt)
+function scr_healallitemspell(healamnt, revive = false)
 {
     var __healAmount = scr_heal_amount_modify_by_equipment(healamnt);
-    scr_healall(__healAmount);
+    scr_healall(__healAmount, revive);
     
     for (i = 0; i < 3; i += 1)
     {
+        if (global.char[i] == 0) continue;
+        if (revive == false && i_ex(obj_knight_enemy) && global.knight_harder && global.hp[global.char[i]] <= -9999) continue;
         with (global.charinstance[i])
         {
             ha = instance_create(x, y, obj_healanim);

@@ -872,7 +872,7 @@ function scr_item_use_action_overworld(itemid) {
         
         case DRItem.ReviveMint:
             reviveamt = ceil(global.maxhp[global.char[global.charselect]] / 2);
-            scr_healitem(global.charselect, reviveamt);
+            scr_healitem(global.charselect, reviveamt, true);
             usable = 1;
             break;
         
@@ -1167,7 +1167,7 @@ function scr_item_use_action_overworld(itemid) {
         case DRItem.BitterTear:
             usable = 1;
             _healamount = ceil(global.maxhp[global.char[global.charselect]]) + abs(global.hp[global.char[global.charselect]]);
-            scr_healitem(global.charselect, _healamount);
+            scr_healitem(global.charselect, _healamount, true);
             break;
     }
 }
@@ -1201,7 +1201,7 @@ function scr_item_use_action_battle(casterid, itemid) {
             if (global.hp[starChara] <= 0)
                 reviveamt = ceil(global.maxhp[starChara]) + abs(global.hp[starChara]);
             
-            scr_healitemspell(reviveamt);
+            scr_healitemspell(reviveamt, true);
             break;
 		}
         
@@ -1348,7 +1348,7 @@ function scr_item_use_action_battle(casterid, itemid) {
                     if (global.hp[starChara] <= 0)
                         healamount = ceil(global.maxhp[starChara] / 4) + abs(global.hp[starChara]);
                     
-                    scr_healitemspell(healamount);
+                    scr_healitemspell(healamount, true);
                 }
             }
             
@@ -1368,7 +1368,7 @@ function scr_item_use_action_battle(casterid, itemid) {
                     if (global.hp[starChara] <= 0)
                         healamount = 999;
                     
-                    scr_healitemspell(healamount);
+                    scr_healitemspell(healamount, true);
                 }
             }
             
@@ -1454,7 +1454,7 @@ function scr_item_use_action_battle(casterid, itemid) {
 		
 		case DRItem.BitterTear: {
 			reviveamt = ceil(global.maxhp[global.char[star]]) + abs(global.hp[global.char[star]]);
-            scr_healitemspell(scr_heal_amount_modify_by_equipment(reviveamt));
+            scr_healitemspell(scr_heal_amount_modify_by_equipment(reviveamt), true);
 			break;	
 		}
     }
