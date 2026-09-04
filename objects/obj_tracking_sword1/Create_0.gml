@@ -13,3 +13,4 @@ fadetofulltime = 20;
 flashtime = 4;
 len = 120;
 lenstart = len;
+aperture = false;

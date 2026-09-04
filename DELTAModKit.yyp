@@ -431,6 +431,7 @@
     {"id":{"name":"obj_tracking_sword_slash","path":"objects/obj_tracking_sword_slash/obj_tracking_sword_slash.yy",},},
     {"id":{"name":"obj_tracking_sword1","path":"objects/obj_tracking_sword1/obj_tracking_sword1.yy",},},
     {"id":{"name":"obj_tracking_sword2","path":"objects/obj_tracking_sword2/obj_tracking_sword2.yy",},},
+    {"id":{"name":"obj_tracking_swords_aperture_manager","path":"objects/obj_tracking_swords_aperture_manager/obj_tracking_swords_aperture_manager.yy",},},
     {"id":{"name":"obj_tracking_swords_manager","path":"objects/obj_tracking_swords_manager/obj_tracking_swords_manager.yy",},},
     {"id":{"name":"obj_whiteedge","path":"objects/obj_whiteedge/obj_whiteedge.yy",},},
     {"id":{"name":"obj_writer_stay","path":"objects/obj_writer_stay/obj_writer_stay.yy",},},

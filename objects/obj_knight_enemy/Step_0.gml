@@ -645,6 +645,11 @@ if (global.monster[myself] == 1)
                 dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
                 dc.type = DRBulletPattern.KnightHeartFollower;
 			}
+			else if (myattackchoice == 301) {
+				global.monsterattackname[myself] = "aperture";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.KnightAperture;
+			}
 			
 			if (myattackchoice == 203)
             {

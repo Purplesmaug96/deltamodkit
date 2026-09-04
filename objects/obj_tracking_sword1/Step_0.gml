@@ -2,6 +2,10 @@ if (con < 2)
 {
     x = obj_heart.x + 10 + lengthdir_x(len, direction);
     y = clamp(obj_heart.y + 10 + lengthdir_y(len, direction), cameray() + 40, cameray() + 320);
+	if (aperture) {
+		x -= lengthdir_x(distance_, direction - 90);
+		y -= lengthdir_y(distance_, direction - 90);
+	}
 }
 if (con == 0)
 {
