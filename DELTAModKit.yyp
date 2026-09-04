@@ -544,6 +544,7 @@
     {"id":{"name":"scr_iteminfo","path":"scripts/scr_iteminfo/scr_iteminfo.yy",},},
     {"id":{"name":"scr_items_config","path":"scripts/scr_items_config/scr_items_config.yy",},},
     {"id":{"name":"scr_jump","path":"scripts/scr_jump/scr_jump.yy",},},
+    {"id":{"name":"scr_knight_text","path":"scripts/scr_knight_text/scr_knight_text.yy",},},
     {"id":{"name":"scr_lerpvar_instance","path":"scripts/scr_lerpvar_instance/scr_lerpvar_instance.yy",},},
     {"id":{"name":"scr_levelup","path":"scripts/scr_levelup/scr_levelup.yy",},},
     {"id":{"name":"scr_light_items_config","path":"scripts/scr_light_items_config/scr_light_items_config.yy",},},

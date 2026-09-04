@@ -705,90 +705,7 @@ if (global.monster[myself] == 1)
             turns += 1;
             global.typer = 6;
             global.fc = 0;
-            if (phase == 1)
-            {
-                if (phaseturn == 0)
-                {
-                    global.battlemsg[0] = stringsetloc("* You felt lightheaded.&* You saw silver stars...", "obj_knight_enemy_slash_Step_0_gml_496_0");
-                }
-                if (phaseturn == 1)
-                {
-                    global.battlemsg[0] = stringsetloc("* You felt something hovering close behind your head...", "obj_knight_enemy_slash_Step_0_gml_521_0");
-                }
-                if (phaseturn == 2)
-                {
-                    global.battlemsg[0] = stringsetloc("* Suddenly, the north wind blew fiercely.", "obj_knight_enemy_slash_Step_0_gml_498_0");
-                }
-                if (phaseturn == 3)
-                {
-                    global.battlemsg[0] = stringsetloc("* Your vision narrows.", "obj_knight_enemy_slash_Step_0_gml_499_0");
-                }
-                if (phaseturn == 4)
-                {
-                    global.battlemsg[0] = stringsetloc("* Your chest feels tight.", "obj_knight_enemy_slash_Step_0_gml_500_0");
-                }
-            }
-            if (phase == 2)
-            {
-                if (phaseturn == 0)
-                {
-                    global.battlemsg[0] = stringsetloc("* You felt lightheaded.&* You saw golden stars...", "obj_knight_enemy_slash_Step_0_gml_504_0");
-                }
-                if (phaseturn == 1)
-                {
-                    global.battlemsg[0] = stringsetloc("* Suddenly, the north and east winds blew fiercely.", "obj_knight_enemy_slash_Step_0_gml_505_0");
-                }
-                if (phaseturn == 2)
-                {
-                    global.battlemsg[0] = stringsetloc("* Your vision narrows.&* ... Your head is spinning.", "obj_knight_enemy_slash_Step_0_gml_506_0");
-                }
-                if (phaseturn == 3)
-                {
-                    global.battlemsg[0] = stringsetloc("* You feel surrounded.", "obj_knight_enemy_slash_Step_0_gml_531_0");
-                }
-                if (phaseturn == 4)
-                {
-                    global.battlemsg[0] = stringsetloc("* You felt your chest twisting.", "obj_knight_enemy_slash_Step_0_gml_508_0");
-                }
-            }
-            if (phase == 3)
-            {
-                if (phaseturn == 0)
-                {
-                    global.battlemsg[0] = stringsetloc("* You felt lightheaded.&* You felt a migraine coming on...", "obj_knight_enemy_slash_Step_0_gml_514_0");
-                }
-                if (phaseturn == 1)
-                {
-                    global.battlemsg[0] = stringsetloc("* Suddenly, a tempest.", "obj_knight_enemy_slash_Step_0_gml_515_0");
-                }
-                if (phaseturn == 2)
-                {
-                    global.battlemsg[0] = stringsetloc("* Your vision narrows.&* ... The world revolves around you.", "obj_knight_enemy_slash_Step_0_gml_516_0");
-                }
-                if (phaseturn == 3)
-                {
-                    global.battlemsg[0] = stringsetloc("* You feel cornered.", "obj_knight_enemy_slash_Step_0_gml_541_0");
-                }
-                if (phaseturn == 4)
-                {
-                    global.battlemsg[0] = stringsetloc("* Your heartbeat becomes twisted.", "obj_knight_enemy_slash_Step_0_gml_518_0");
-                }
-            }
-            if (phase == 4 || haveusedroaring == true)
-            {
-                if (phase4turn == 2)
-                {
-                    global.battlemsg[0] = stringsetloc("* The Knight's hands glow a strange color...", "obj_knight_enemy_slash_Step_0_gml_319_0");
-                }
-                if (phase4turn > 2)
-                {
-                    global.battlemsg[0] = stringsetloc("* The enemy suddenly let down its guard!", "obj_knight_enemy_slash_Step_0_gml_321_0");
-                }
-                if (phase4turn == 3 && progamer == true)
-                {
-                    global.battlemsg[0] = stringsetloc("* Kris coughed.&* The enemy slowly tilted its head...", "obj_knight_enemy_slash_Step_0_gml_322_0");
-                }
-            }
+            scr_knight_text();
             attacked = 1;
         }
     }
@@ -820,31 +737,68 @@ if (global.monster[myself] == 1)
             var susiedown = "";
             var ralseidown = "";
             var downcount = 0;
-            if (krisdownmessage == false && global.hp[1] < 1)
-            {
-                krisdown = stringsetloc("* Kris kneeled in silence.&", "obj_knight_enemy_slash_Step_0_gml_343_0");
-                downcount++;
-                krisdownmessage = true;
-                global.battlemsg[0] = krisdown;
-            }
-            if (susiedownmessage == false && global.hp[2] < 1)
-            {
-                susiedown = stringsetloc("* Susie was hurt and beaten.&", "obj_knight_enemy_slash_Step_0_gml_344_0");
-                downcount++;
-                susiedownmessage = true;
-                global.battlemsg[0] = susiedown;
-            }
-            if (ralseidownmessage == false && global.hp[3] < 1)
-            {
-                ralseidown = stringsetloc("* Ralsei became a pile of fluff.&", "obj_knight_enemy_slash_Step_0_gml_345_0");
-                downcount++;
-                ralseidownmessage = true;
-                global.battlemsg[0] = ralseidown;
-            }
-            if (downcount == 2)
-            {
-                global.battlemsg[0] = krisdown + susiedown + ralseidown;
-            }
+            if (global.knight_harder) {
+				if (krisdownmessage == false && global.hp[1] < 1)
+	            {
+	                krisdown = stringsetloc("* Kris's gone...&", "obj_knight_enemy_slash_Step_0_gml_343_0");
+	                downcount++;
+	                krisdownmessage = true;
+	                global.battlemsg[0] = krisdown;
+	            }
+	            if (susiedownmessage == false && global.hp[2] < 1)
+	            {
+	                susiedown = stringsetloc("* Susie's gone...&", "obj_knight_enemy_slash_Step_0_gml_344_0");
+	                downcount++;
+	                susiedownmessage = true;
+	                global.battlemsg[0] = susiedown;
+	            }
+	            if (ralseidownmessage == false && global.hp[3] < 1)
+	            {
+	                ralseidown = stringsetloc("* Ralsei's gone...&", "obj_knight_enemy_slash_Step_0_gml_345_0");
+	                downcount++;
+	                ralseidownmessage = true;
+	                global.battlemsg[0] = ralseidown;
+	            }
+	            if (downcount == 2)
+	            {
+		            if (krisdownmessage && susiedownmessage) {
+						global.battlemsg[0] = "* Kris and Susie are gone...";
+					}
+					else if (krisdownmessage && ralseidownmessage) {
+						global.battlemsg[0] = "* Kris and Ralsei are gone...";
+					}
+					else if (susiedownmessage && ralseidownmessage) {
+						global.battlemsg[0] = "* Susie and Ralsei are gone...";
+					}
+	            }
+			}
+			else {
+				if (krisdownmessage == false && global.hp[1] < 1)
+	            {
+	                krisdown = stringsetloc("* Kris kneeled in silence.&", "obj_knight_enemy_slash_Step_0_gml_343_0");
+	                downcount++;
+	                krisdownmessage = true;
+	                global.battlemsg[0] = krisdown;
+	            }
+	            if (susiedownmessage == false && global.hp[2] < 1)
+	            {
+	                susiedown = stringsetloc("* Susie was hurt and beaten.&", "obj_knight_enemy_slash_Step_0_gml_344_0");
+	                downcount++;
+	                susiedownmessage = true;
+	                global.battlemsg[0] = susiedown;
+	            }
+	            if (ralseidownmessage == false && global.hp[3] < 1)
+	            {
+	                ralseidown = stringsetloc("* Ralsei became a pile of fluff.&", "obj_knight_enemy_slash_Step_0_gml_345_0");
+	                downcount++;
+	                ralseidownmessage = true;
+	                global.battlemsg[0] = ralseidown;
+	            }
+	            if (downcount == 2)
+	            {
+	                global.battlemsg[0] = krisdown + susiedown + ralseidown;
+	            }
+			}
         }
     }
     if (global.hp[1] < 1 && global.hp[2] < 1 && global.hp[3] < 1 && global.turntimer > 0)
