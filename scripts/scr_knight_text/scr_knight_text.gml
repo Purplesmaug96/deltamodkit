@@ -7,7 +7,7 @@ function scr_knight_text() {
 	        }
 	        if (phaseturn == 1)
 	        {
-	            global.battlemsg[0] = stringsetloc("* You felt something hovering close behind your head...", "obj_knight_enemy_slash_Step_0_gml_521_0");
+	            global.battlemsg[0] = stringsetloc("* You saw swords falling above you...", "obj_knight_enemy_slash_Step_0_gml_521_0");
 	        }
 	        if (phaseturn == 2)
 	        {
@@ -19,7 +19,7 @@ function scr_knight_text() {
 	        }
 	        if (phaseturn == 4)
 	        {
-	            global.battlemsg[0] = stringsetloc("* Your chest feels tight.", "obj_knight_enemy_slash_Step_0_gml_500_0");
+	            global.battlemsg[0] = stringsetloc("* You feel the shadows cutting deeper.", "obj_knight_enemy_slash_Step_0_gml_500_0");
 	        }
 	    }
 	    if (phase == 2)
@@ -30,7 +30,7 @@ function scr_knight_text() {
 	        }
 	        if (phaseturn == 1)
 	        {
-	            global.battlemsg[0] = stringsetloc("* Suddenly, the north and east winds blew fiercely.", "obj_knight_enemy_slash_Step_0_gml_505_0");
+	            global.battlemsg[0] = stringsetloc("* Suddenly, the enemy rises from below you.", "obj_knight_enemy_slash_Step_0_gml_505_0");
 	        }
 	        if (phaseturn == 2)
 	        {
@@ -53,7 +53,7 @@ function scr_knight_text() {
 	        }
 	        if (phaseturn == 1)
 	        {
-	            global.battlemsg[0] = stringsetloc("* Suddenly, a tempest.", "obj_knight_enemy_slash_Step_0_gml_515_0");
+	            global.battlemsg[0] = stringsetloc("* You feel trapped.", "obj_knight_enemy_slash_Step_0_gml_515_0");
 	        }
 	        if (phaseturn == 2)
 	        {
