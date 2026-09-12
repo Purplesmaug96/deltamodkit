@@ -675,6 +675,10 @@ if (global.monster[myself] == 1)
             {
                 scr_turntimer(400);
             }
+			else if (myattackchoice == 302)
+            {
+                scr_turntimer(450);
+            }
             else if (myattackchoice == 7)
             {
                 scr_turntimer(270);

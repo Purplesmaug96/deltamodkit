@@ -12,7 +12,7 @@ if (global.knight_harder) {
 	{
 	    if (phaseturn == 1)
 	    {
-	        myattackchoice = 302;
+	        myattackchoice = 101;
 	        difficulty = 1;
 	    }
 	    if (phaseturn == 2)
