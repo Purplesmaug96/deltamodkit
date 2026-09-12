@@ -20,3 +20,6 @@ trackpos = true
 trackdir = false;
 trackobj = obj_heart;
 alwaysopaque = false;
+telegraph = false;
+telegraphalpha = 0;
+telegraphlength = 999;

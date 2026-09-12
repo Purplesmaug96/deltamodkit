@@ -61,6 +61,7 @@ if (con == 3)
     }
     if (timer == 2)
     {
+        telegraph = false;
         slash = instance_create(x, y, obj_tracking_sword_slash);
         slash.image_angle = image_angle;
         slash.direction = direction;

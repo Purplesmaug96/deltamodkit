@@ -9,6 +9,7 @@ if (_turnintoatrackingswordtimer == _turnintoatrackingswordtime) {
 	trackingsword.damage = damage;
 	trackingsword.trackpos = false;
 	trackingsword.alwaysopaque = true;
+	trackingsword.telegraph = true;
 	instance_destroy(id);
 }
 _speed += _gravity;

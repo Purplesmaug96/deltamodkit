@@ -1,3 +1,15 @@
+if (!telegraph && telegraphalpha > 0)
+{
+    telegraphalpha -= 0.1;
+}
+if (telegraph && telegraphalpha < 0.5)
+{
+    telegraphalpha += 0.05;
+}
+if (telegraphalpha > 0)
+{
+    draw_sprite_ext(spr_lasergun_laser_telegraph, 0, x, y, telegraphlength, 0.4, direction, c_red, telegraphalpha);
+}
 if (afterimagecon == 0)
 {
 	image_alpha = alwaysopaque ? 1 : _alpha;
