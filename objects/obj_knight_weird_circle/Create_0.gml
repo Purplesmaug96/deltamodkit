@@ -8,3 +8,4 @@ g = 64;
 b = 64;
 rgb_rate = 24;
 hellzone = false;
+bomb = false;

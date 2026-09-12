@@ -670,6 +670,16 @@ if (global.monster[myself] == 1)
                 dc.damage = 62;
                 global.invc = 0.14;
 			}
+			else if (myattackchoice == 303) {
+				global.monsterattackname[myself] = "underboxbomb";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.UnderboxBomb;
+				global.monsterattackname[myself] = "sword vortex";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.SwordVortex;
+                dc.difficulty = 3;
+                dc.damage = 206;
+			}
 			
 			if (myattackchoice == 203)
             {

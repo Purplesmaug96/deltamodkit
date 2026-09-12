@@ -22,7 +22,8 @@ enum DRBulletPattern {
 	SwordCircle = 156,
 	KnightHeartFollower = 157,
 	KnightAperture = 158,
-	SwordTunnelNewWithTrackingSwords=159
+	SwordTunnelNewWithTrackingSwords=159,
+	UnderboxBomb = 160,
 }
 
 function scr_bullet_pattern(bulletPatternId) {
@@ -479,6 +480,35 @@ function scr_bullet_pattern(bulletPatternId) {
 					event_user(0);
 				}
 				made = true;
+			}
+			break;
+		}
+		case DRBulletPattern.UnderboxBomb: {
+			if (!made && i_ex(obj_knight_enemy))
+			{
+				with (obj_knight_enemy)
+				{
+					with (instance_create_depth(x, y, depth, obj_knight_warp))
+					{
+						master = other.id;
+						event_user(1);
+					}
+				}
+				obj_growtangle.image_xscale = 2;
+				obj_growtangle.image_yscale = 2;
+				global.turntimer = 999999;
+				made = true;
+				with (creatorid)
+				{
+					image_alpha = 0;
+				}
+				var knight_weird = instance_create(creatorid.x, creatorid.y, obj_knight_weird_bottom_manager);
+				scr_bullet_inherit(knight_weird);
+				knight_weird.bomb = true;
+				with (knight_weird)
+				{
+					event_user(0);
+				}
 			}
 			break;
 		}

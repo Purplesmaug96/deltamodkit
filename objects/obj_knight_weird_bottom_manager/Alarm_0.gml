@@ -8,7 +8,9 @@ repeat (6)
     if (circle_val < 5)
     {
         circle_val++;
-        with (instance_create(x, y, obj_knight_weird_circle))
+		var abc = instance_create(x, y, obj_knight_weird_circle);
+		abc.bomb = bomb;
+        with (abc)
         {
             angle = (360 / other.circle_goal) * ds_list_size(other.circle_list);
             orbit_distance = other.circle_distance;

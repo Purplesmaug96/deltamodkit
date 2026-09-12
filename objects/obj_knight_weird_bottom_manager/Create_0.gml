@@ -24,3 +24,4 @@ turn_segment = -1;
 next_up = -999;
 next_next_up = -1;
 local_turntimer = 340;
+bomb = false;
