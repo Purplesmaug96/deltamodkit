@@ -1,3 +1,4 @@
+var hpthresh = global.monstermaxhp[myself] * (global.knight_harder ? 0.2 : 0.8);
 if (!i_ex(obj_herosusie) || !i_ex(obj_heroralsei))
 {
     if (debugvar == false && scr_debug())
@@ -660,6 +661,14 @@ if (global.monster[myself] == 1)
                 dc.type = DRBulletPattern.SwordVortex;
                 dc.difficulty = 3;
                 dc.damage = 206;
+			}
+			else if (myattackchoice == 302) {
+				global.monsterattackname[myself] = "sword tunnel new with tracking";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.SwordTunnelNewWithTrackingSwords;
+                dc.difficulty = difficulty;
+                dc.damage = 62;
+                global.invc = 0.14;
 			}
 			
 			if (myattackchoice == 203)

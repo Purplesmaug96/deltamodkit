@@ -101,5 +101,4 @@ global.tempflag[96] = 0;
 
 if (global.knight_harder) image_blend = c_red;
 
-hpthresh = global.monstermaxhp[myself] * (global.knight_harder ? 0.2 : 0.8);
 endphase = global.knight_harder ? 8 : 4;

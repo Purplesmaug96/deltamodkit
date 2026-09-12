@@ -1,7 +1,7 @@
-if (con < 2)
+if (con < 2 && trackpos)
 {
-    x = obj_heart.x + 10 + lengthdir_x(len, direction);
-    y = clamp(obj_heart.y + 10 + lengthdir_y(len, direction), cameray() + 40, cameray() + 320);
+    x = trackobj.x + 10 + lengthdir_x(len, direction);
+    y = clamp(trackobj.y + 10 + lengthdir_y(len, direction), cameray() + 40, cameray() + 320);
 	if (aperture) {
 		x -= lengthdir_x(distance_, direction - 90);
 		y -= lengthdir_y(distance_, direction - 90);
@@ -14,8 +14,8 @@ if (con == 0)
     {
         snd_play_x(snd_knight_jump_quick, 1, 1.3);
     }
-    image_alpha = lerp(0, 0.5, timer / fadetohalftime);
-    if (image_alpha == 0.5)
+    _alpha = lerp(0, 0.5, timer / fadetohalftime);
+    if (_alpha == 0.5)
     {
         con = 1;
         timer = 0;
@@ -26,11 +26,11 @@ if (con == 1)
     timer++;
     if (timer >= waittime)
     {
-        image_alpha = lerp(0.8, 1, (timer - waittime) / fadetofulltime);
+        _alpha = lerp(0.8, 1, (timer - waittime) / fadetofulltime);
         len = lerp(len, lenstart + 10, (timer - waittime) / fadetofulltime);
         image_blend = merge_color(c_white, c_red, timer / 30);
     }
-    if (image_alpha == 1)
+    if (_alpha == 1)
     {
         con = 2;
         timer = 0;

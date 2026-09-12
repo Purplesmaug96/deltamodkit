@@ -21,6 +21,12 @@ tobyvolleymode = 0;
 tobyvolleycount = 0;
 tobyvolleyamount = 10 + irandom(6);
 tobyvolleymodeinitspeed = 1;
+
+dotrackingswords = false;
+trackingswordtimer = 0;
+trackingswordrate = 15;
+trackingswordmarked = false;
+
 stopsfxtimer = 0;
 event_user(0);
 instance_create(obj_knight_enemy.x, obj_knight_enemy.y, obj_knight_swordtunnelanim);

@@ -20,3 +20,5 @@ targetangle = 0;
 anglespeed = 8;
 telegraph = 0;
 telegraphalpha = 0;
+_turnintoatrackingswordtimer = 0;
+_turnintoatrackingswordtime = 0;

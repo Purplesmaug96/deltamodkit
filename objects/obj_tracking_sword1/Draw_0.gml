@@ -1,5 +1,6 @@
 if (afterimagecon == 0)
 {
+	image_alpha = alwaysopaque ? 1 : _alpha;
     draw_self();
     if (con == 2)
     {
