@@ -728,9 +728,9 @@ if (global.monster[myself] == 1)
     if (global.mnfight == 2 && global.turntimer <= 1 && setdownmessage == false)
     {
         setdownmessage = true;
-        if (global.monsterhp[myself] <= (global.monstermaxhp[myself] * 0.8) && haveusedroaring == false && phase != 4)
+        if (global.monsterhp[myself] <= (hpthresh) && haveusedroaring == false && phase != 4)
         {
-            phase = 4;
+            phase = endphase;
         }
         if (phase == 4 && phase4turn < 3)
         {

@@ -1,13 +1,13 @@
+if (phase != endphase)
+{
+	turn++;
+	phaseturn++;
+}
+if (scr_debug() && overrideAttack > 0)
+{
+	phaseturn = overrideAttack;
+}
 if (global.knight_harder) {
-	if (phase != 4)
-	{
-	    turn++;
-	    phaseturn++;
-	}
-	if (scr_debug() && overrideAttack > 0)
-	{
-	    phaseturn = overrideAttack;
-	}
 	if (phase == 1)
 	{
 	    if (phaseturn == 1)
@@ -118,7 +118,7 @@ if (global.knight_harder) {
 	        phaseturn = 0;
 	    }
 	}
-	if (phase == 4)
+	if (phase == endphase)
 	{
 	    phase4turn++;
 	    if (phase4turn == 1 && rotatingslash3used == true)
@@ -146,15 +146,6 @@ if (global.knight_harder) {
 	}
 }
 else {
-	if (phase != 4)
-	{
-	    turn++;
-	    phaseturn++;
-	}
-	if (scr_debug() && overrideAttack > 0)
-	{
-	    phaseturn = overrideAttack;
-	}
 	if (phase == 1)
 	{
 	    if (phaseturn == 1)
@@ -265,7 +256,7 @@ else {
 	        phaseturn = 0;
 	    }
 	}
-	if (phase == 4)
+	if (phase == endphase)
 	{
 	    phase4turn++;
 	    if (phase4turn == 1 && rotatingslash3used == true)
