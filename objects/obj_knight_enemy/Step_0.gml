@@ -641,14 +641,25 @@ if (global.monster[myself] == 1)
                 dc.type = DRBulletPattern.KnightSplitter;
                 dc.difficulty = 2;
                 global.invc = 0.4;
+				// TODO: I dont really like how this pattern turned out
 				global.monsterattackname[myself] = "heartfollower";
                 dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
                 dc.type = DRBulletPattern.KnightHeartFollower;
 			}
 			else if (myattackchoice == 301) {
+				global.monsterattackname[myself] = "Stars";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.Stars;
+                dc.difficulty = 2;
+                global.invc = 0.4;
 				global.monsterattackname[myself] = "aperture";
                 dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
                 dc.type = DRBulletPattern.KnightAperture;
+				global.monsterattackname[myself] = "sword vortex";
+                dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
+                dc.type = DRBulletPattern.SwordVortex;
+                dc.difficulty = 3;
+                dc.damage = 206;
 			}
 			
 			if (myattackchoice == 203)

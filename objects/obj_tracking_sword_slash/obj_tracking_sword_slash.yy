@@ -10,8 +10,8 @@
   "name":"obj_tracking_sword_slash",
   "overriddenProperties":[],
   "parent":{
-    "name":"SideB",
-    "path":"folders/DELTARUNE/Sprites/Characters/Noelle/Battle/SideB.yy",
+    "name":"Objects",
+    "path":"folders/Custom/Scripts/Objects.yy",
   },
   "parentObjectId":{
     "name":"obj_regularbullet",
