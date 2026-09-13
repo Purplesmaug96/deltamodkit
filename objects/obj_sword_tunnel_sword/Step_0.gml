@@ -1,11 +1,14 @@
 _turnintoatrackingswordtimer++;
 if (_turnintoatrackingswordtimer == _turnintoatrackingswordtime) {
-	show_debug_message("im turning into a tracking sword");
+	// show_debug_message("im turning into a tracking sword");
 	trackingsword = instance_create(x, y, obj_tracking_sword1);
 	trackingsword.direction = image_angle;
 	trackingsword.image_angle = image_angle;
 	trackingsword.sprite_index = sprite_index;
 	trackingsword.image_index = image_index;
+	trackingsword._speed = _speed;
+	trackingsword.mydirection = mydirection;
+	trackingsword._friction = 2;
 	trackingsword.damage = damage;
 	trackingsword.trackpos = false;
 	trackingsword.alwaysopaque = true;

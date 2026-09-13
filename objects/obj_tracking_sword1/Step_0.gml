@@ -7,6 +7,17 @@ if (con < 2 && trackpos)
 		y -= lengthdir_y(distance_, direction - 90);
 	}
 }
+else {
+	x += lengthdir_x(_speed, mydirection);
+	y += lengthdir_y(_speed, mydirection);
+	if (abs(_speed) < _friction) {
+		_speed = 0;
+	}
+	else {
+		if (_speed > 0) { _speed -= _friction; }
+		else { _speed += _friction; }
+	}
+}
 if (con == 0)
 {
     timer++;

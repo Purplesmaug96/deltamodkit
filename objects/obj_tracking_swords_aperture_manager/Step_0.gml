@@ -12,6 +12,7 @@ if ((timer == rate && swordcount <= maxswords) || (timer == multiswordframes && 
 		inst.direction = dir;
         inst.image_angle = inst.direction + 180;
 		inst.aperture = true;
+		inst.telegraph = true;
 		inst.distance_ = distance_;
 		inst.variant = variant;
 		inst.damage = damage;

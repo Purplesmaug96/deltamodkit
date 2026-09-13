@@ -107,7 +107,7 @@ if (timer >= rate && con == 0)
 	if (sword1 != noone && sword2 != noone && trackingswordmarked) {
 		trackingswordmarked = false;
 		show_debug_message("marked a conversion");
-		var timetillturn = irandom_range(0, 15) + 11
+		var timetillturn = irandom_range(0, 10) + 11
 		sword1._turnintoatrackingswordtime = timetillturn;
 		sword2._turnintoatrackingswordtime = timetillturn + 5;
 	}

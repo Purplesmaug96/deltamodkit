@@ -666,7 +666,7 @@ if (global.monster[myself] == 1)
 				global.monsterattackname[myself] = "sword tunnel new with tracking";
                 dc = scr_bulletspawner(x, y, obj_dbulletcontroller);
                 dc.type = DRBulletPattern.SwordTunnelNewWithTrackingSwords;
-                dc.difficulty = difficulty;
+                dc.difficulty = 0;
                 dc.damage = 62;
                 global.invc = 0.14;
 			}

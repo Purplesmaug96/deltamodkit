@@ -23,3 +23,6 @@ alwaysopaque = false;
 telegraph = false;
 telegraphalpha = 0;
 telegraphlength = 999;
+_speed = 0;
+mydirection = 0;
+_friction = 0;
